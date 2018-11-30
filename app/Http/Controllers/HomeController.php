@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Program;
+use App\Career;
+use App\Content;
+use App\Slider;
+use App\Testimony;
+
 
 class HomeController extends Controller
 {

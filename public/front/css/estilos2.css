@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+html, body{
+	height: 100%;
+	width: 100%;
+}
+
+
+
+a{
+    transition: 0.2s linear all;
+    -webkit-transition: 0.2s linear all;
+    -o-transition: 0.2s linear all;
+    -moz-transition: 0.2s linear all;
+    -ms-transition: 0.2s linear all;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    line-height: 1;
+}
+
+
+
+h1{
+	width: 100%;
+	font-family: kodchasan-bold-1, kodchasan-bold-2, arial;
+	text-align: right;
+	color: #fff;
+}
+
+.bloq{
+	background:url('../imagenes/fondo.jpg') no-repeat left top;
+	background-size: auto 100%;
+}
+
+.caja-titulo{
+	padding: 15px 15px;
+	border-right:5px solid #f3e100;
+}
+
+.bloq-der{
+	background:url('../imagenes/media-luna.png') no-repeat left center;
+}
+
+.bloq-der img{
+	float: right;
+}
+
+.tit-1{
+	font-size:58px;
+}
+
+.tit-2{
+	font-size:36px;
+}
+
+.tit-3{
+	font-size:43px;
+}
+
+.tit-4{
+	font-size:36px;
+	font-family:kodchasan-regular-1, kodchasan-regular-2;
+}
+
+.tit-5{
+	font-size:84px;
+	color:#f3e100;
+}
+
+/*:::::: TIPOGRAGÍAS :::::::*/
+@font-face{
+	font-family:kodchasan-regular-1;
+	src:url(../tipografia/Kodchasan-Regular.ttf);
+}
+@font-face{
+	font-family:kodchasan-regular-2;
+	src:url(../tipografia/Kodchasan-Regular.eot);
+}
+
+@font-face{
+	font-family:kodchasan-bold-1;
+	src:url(../tipografia/Kodchasan-Bold.ttf);
+}
+@font-face{
+	font-family:kodchasan-bold-2;
+	src:url(../tipografia/Kodchasan-Bold.eot);
+}
+
+
+
+
+/*:::::: RESPONSIVE :::::::*/
+
+@media screen and (max-width:1250px){
+	
+
+
+}
+
+@media screen and (max-width:991px){
+
+}
+
+
+@media screen and (max-width:767px){
+	.bloq-izq{
+		height: 400px; 
+	}
+
+}
+
+
+@media screen and (max-width:576px){
+
+
+
+}
+
+
+@media screen and (max-width:480px){
+
+	
+}
+
+
+
+
