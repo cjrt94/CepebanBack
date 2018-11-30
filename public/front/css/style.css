@@ -1,0 +1,138 @@
+
+/***** MENU RESPONSIVE ******/
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 2;
+    padding: 40px 50px 0 50px;
+}
+.side-nav.sombreado {
+    -webkit-box-shadow: 2px 0 7px #00913f;
+    box-shadow: 2px 0 7px #00913f;
+}
+.menu-btn {
+    font-size: 40px;
+    display: block;
+    color: #00913f;
+}
+.menu-btn:hover, .menu-btn:focus {
+    color: #00913f;
+}
+.social {
+    position: absolute;
+    bottom: 5%;
+    font-size: 25px;
+    right: 50px;
+}
+.social a {
+    display: block;
+    margin-bottom: 5px;
+    -o-transition: all 1s easing-out;
+    -ms-transition: all 1s easing-out;
+    -moz-transition: all 1s easing-out;
+    -webkit-transition: all 1s easing-out;
+    transition: all 1s easing-out;
+    color: #00913f;
+    font-size: 30px;
+}
+nav.navigation {
+    width: 100%;
+    position: fixed !important;
+    height: 100%;
+    min-height: 100%;
+    background-color: #00843b;
+    text-align: center;
+    padding-top: 15px;
+    z-index: 9;
+    top: 0;
+    left: -100%;
+    display: table;
+}
+nav.navigation.nav-on .collapse {
+    display: inline-block !important;
+}
+nav.navigation.nav-on ul.navbar-nav {
+    display: inherit;
+}
+nav.navigation.nav-on .social {
+    top: 40px;
+    z-index: 3;
+}
+nav.navigation.nav-on .social a {
+    color: #fff;
+}
+nav.navigation ul.navbar-nav li {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+nav.navigation ul.navbar-nav li a {
+    display: block;
+    font-size: 40px;
+    color: #fff;
+    padding: 10px 0;
+}
+nav.navigation ul.navbar-nav li a:hover h1 {
+    text-decoration: underline;
+}
+nav.navigation ul.navbar-nav li h1 {
+    text-transform: inherit;
+    font-size: 36px;
+    line-height: 35px;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -webkit-transition: 1s;
+    transition: 1s;
+    color: #fff !important;
+    font-family: cervo-light-1, cervo-light-2, arial;
+    line-height: inherit !important;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+nav.navigation ul.navbar-nav li.logo {
+    margin-bottom: 50px;
+}
+nav.navigation .closeBtn {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}
+nav.navigation .closeBtn a {
+    font-size: 40px;
+    color: #fff;
+}
+
+
+
+@media screen and (max-width:480px){
+    nav.navigation .closeBtn {
+        top: 20px;
+        left: 25px;
+    }
+
+    .social {
+        display: none;
+    }
+
+    nav.navigation ul.navbar-nav li.logo {
+        margin-bottom: 20px;
+    }
+
+    nav.navigation ul.navbar-nav li h1 {
+        font-size: 26px;
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
+
+
+

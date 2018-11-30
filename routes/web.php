@@ -11,18 +11,16 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->name('indexCareer');
 
+ 
 
+Route::get('/', 'HomeController@index');
+
+ 
 
  Route::group(['middleware' => 'auth', 'prefix' => 'admin' ], function () {
 
  	 
-
-		Route::get('/', function () {
-		    return view('home');
-		});
-
 
 		//Careers
 		Route::get('/carreras', 'CareerController@index')->name('indexCareer');
