@@ -3,8 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 	<title>@yield('title','Inicio')</title>
-	<link rel="stylesheet" href="">
+	
+    <link rel="stylesheet" href="">
       <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -18,6 +20,8 @@
     <link href="{{asset('vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.css') }}" rel="stylesheet">
     <link href="{{ asset('vendors/farbtastic/farbtastic.css') }}" rel="stylesheet">
     <link href="{{ asset('vendors/bower_components/chosen/chosen.css') }}" rel="stylesheet">
+
+    
     <link href="{{ asset('vendors/summernote/dist/summernote.css') }}" rel="stylesheet">
 
    
@@ -146,13 +150,10 @@
                     </li>
 
                     <li >
-                        <a href="{{route('indexSlider')}}"><i class="zmdi zmdi-collection-image
-
-"></i> Sliders</a>
+                        <a href="{{route('indexSlider')}}"><i class="zmdi zmdi-collection-image"></i> Sliders</a>
                     </li>
 
-
-                  
+                 
                   
                 </ul>
             </aside>

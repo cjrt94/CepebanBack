@@ -23,6 +23,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $programs=  Program::all();
+        $careers= Career::all();
+        $contents= Content::all();
+        $sliders= Slider::all();
+        $tetimonies= Testimony::all();
+
+
+        return view('front.index',[
+            'programs' => $programs,
+            'careers' => $careers,
+            'contents' => $contents,
+            'sliders' => $sliders,
+            'tetimonies' => $tetimonies
+
+
+        ]);
     }
 }

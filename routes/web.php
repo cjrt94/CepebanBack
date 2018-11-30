@@ -11,8 +11,13 @@
 |
 */
 
+Route::get('/', 'HomeController@index')->name('indexCareer');
 
- Route::group(['middleware' => 'auth'], function () {
+
+
+ Route::group(['middleware' => 'auth', 'prefix' => 'admin' ], function () {
+
+ 	 
 
 		Route::get('/', function () {
 		    return view('home');
@@ -52,6 +57,8 @@
 
 		Route::get('/sliders', 'SliderController@index')->name('indexSlider');
 		Route::put('/slider/update/', 'SliderController@update')->name('updateSlider');
+
+ 
 
 });
 

@@ -4,10 +4,7 @@
 
 @section('title','Listado de Leads')
 
-@section('recipe-menu')
-    active
-@endsection
-
+ 
 <section id="content">
                 <div class="container">
                     <div class="block-header">
