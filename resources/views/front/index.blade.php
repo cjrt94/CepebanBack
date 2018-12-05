@@ -13,23 +13,18 @@
     <script type="text/javascript" src="{{asset('front/js/jquery.min.js')}}"></script>
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
-    
+
 
     <title>{{$contents[0]->title_page}}</title>
 
-    
+
 
    <script src="{{asset('front/js/youtube-modal-bootstrap.js')}}" type="text/javascript"></script>
-
-
-
-
-
 
   </head>
   <body>
 
-  
+
 
 
   <section class="container-fluid h-100 principal">
@@ -106,6 +101,17 @@
                       <label for="correo">Correo *</label>
                       <input type="text" class="form-control" id="correo" aria-describedby="Correo">
                     </div>
+
+                    <div class="form-group">
+                      <label for="carrera">Sedes *</label>
+                      <select class="form-control" id="carrera">
+                        <option selected="checked">SELECCIONAR...</option>
+                        @foreach($venues as $venue)
+                          <option value="{{$venue->id}}">{{$venue->name}}</option>
+                        @endforeach
+                      </select>
+                    </div>
+
                     <div class="form-group">
                       <label for="carrera">Carrera *</label>
                       <select class="form-control" id="carrera">
@@ -137,7 +143,7 @@
                           <div class="col-xs-6 col-sm-6 col-md-6">
                             <button type="submit" class="btn btn-primary">Pedir Información</button>
                           </div>
-                        </div>  
+                        </div>
                       </div>
                     </div>
                     <br>
@@ -200,10 +206,10 @@
         </div>
         @endforeach
 
-    
-        
+
+
       </div>
-      
+
       <div class="col-md-12 col-lg-6 h-100 programas">
         <div class="row">
           <h1>Contamos con <span>6 programas</span> de rápida inserción laboral.</h1>
@@ -231,7 +237,7 @@
           </div>
           <!--////////-->
           @endforeach
-          
+
         </div>
       </div>
 
@@ -294,7 +300,7 @@
                     </div>
                   </div>
                 </div>
-               
+
               </div>
 
               <!--responsive 2-->
@@ -329,7 +335,7 @@
                     </div>
                   </div>
                 </div>
-               
+
               </div>
 
               <!--responsive 3-->
@@ -354,7 +360,7 @@
                     </div>
                   </div>
                 </div>
-               
+
               </div>
 
               <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
@@ -411,32 +417,32 @@
     </div>
   </section>
 
-  
+
   <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
 
-      
+
       <div class="modal-body">
 
        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
-        </button>        
+        </button>
         <!-- 16:9 aspect ratio -->
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
       </div>
-        
-        
+
+
       </div>
 
     </div>
   </div>
 
-</div> 
+</div>
 <!-- Fin Modal -->
-    
+
   <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
 
 

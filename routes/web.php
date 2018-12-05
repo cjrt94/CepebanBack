@@ -12,15 +12,12 @@
 */
 
 
- 
 
 Route::get('/', 'HomeController@index');
 
- 
-
  Route::group(['middleware' => 'auth', 'prefix' => 'admin' ], function () {
 
- 	 
+ 	  Route::get('/', 'BackController@index');
 
 		//Careers
 		Route::get('/carreras', 'CareerController@index')->name('indexCareer');
@@ -56,12 +53,10 @@ Route::get('/', 'HomeController@index');
 		Route::get('/sliders', 'SliderController@index')->name('indexSlider');
 		Route::put('/slider/update/', 'SliderController@update')->name('updateSlider');
 
- 
+
 
 });
 
 
 
 Auth::routes();
-
- 

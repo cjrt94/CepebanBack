@@ -8,33 +8,19 @@ use App\Career;
 use App\Content;
 use App\Slider;
 use App\Testimony;
+use App\Venue;
 
 
-class HomeController extends Controller
-{
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+class HomeController extends Controller{
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
+  public function index(){
 
         $programs=  Program::all();
         $careers= Career::all();
         $contents= Content::all();
         $sliders= Slider::all();
         $tetimonies= Testimony::all();
+        $venues=  Venue::all();
 
 
         return view('front.index',[
@@ -42,9 +28,11 @@ class HomeController extends Controller
             'careers' => $careers,
             'contents' => $contents,
             'sliders' => $sliders,
-            'tetimonies' => $tetimonies
-
+            'tetimonies' => $tetimonies,
+            'venues' => $venues,
 
         ]);
     }
+
+
 }

@@ -11,11 +11,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
+      DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+
          $this->call(CareerSeeder::class);
          $this->call(ProgramSeeder::class);
          $this->call(TestimonySeeder::class);
          $this->call(ContentSeeder::class);
          $this->call(SliderSeeder::class);
+         $this->call(VenueSeeder::class);
+
+      DB::statement('SET FOREIGN_KEY_CHECKS=1;');          
 
 
         factory(App\Lead::class)

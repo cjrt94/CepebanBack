@@ -15,8 +15,8 @@ class ContentSeeder extends Seeder
 
         $content= new   App\Content();
         $content->social_fa="https://www.facebook.com/CorporacionCepeban/";
-        $content->social_ins="https://www.instagram.com/explore/locations/1014755327/instituto-cepeban/";
-       	$content->social_yt = "https://www.youtube.com/channel/UCnpF0SuCATh_nvXnWXUk8OQ";
+        $content->social_ins="https://instagram.com/institutocepeban?utm_source=ig_profile_share&igshid=1ws43kboh6aq3";
+       	$content->social_yt = "-	https://twitter.com/ICEPEBAN";
        	$content->title_page="Cepeban";
        	$content->title_test="TESTIMONIALES";
        	$content->subtitle_test="Nuestros alumnos y egresados comparten con ustedes el orgullo de estudiar con nosotros.";

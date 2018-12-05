@@ -14,7 +14,7 @@ class CareerSeeder extends Seeder
         App\Career::truncate();
 
         $career1= new   App\Career();
-        $career1->name="ADMINISTRACIÓN BANCARIA";
+        $career1->name="ADMINISTRACIÓN DE NEGOCIOS BANCARIOS Y FINANCIEROS";
         $career1->description="Gestiona, identifica y brinda soluciones con visión global a los distintos procesos que se presentan en el mundo de la banca.";
         $career1->icon="ico-administracion-bancaria.png";
         $career1->save();
@@ -32,6 +32,6 @@ class CareerSeeder extends Seeder
         $career1->icon="ico-contabilidad-finanzas-auditoria.png";
         $career1->save();
 
- 
+
     }
 }
