@@ -13,13 +13,16 @@ class CreateVenuesProgramsTable extends Migration
      */
     public function up()
     {
-        Schema::create('venues_programs', function (Blueprint $table) {
+        Schema::create('program_venue', function (Blueprint $table) {
             $table->integer('program_id')->unsigned();
             $table->integer('venue_id')->unsigned();
 
             $table->primary(['program_id' ,'venue_id']);
             $table->foreign('program_id')->references('id')->on('programs')->onDelete('cascade');;
             $table->foreign('venue_id')->references('id')->on('venues')->onDelete('cascade');;
+
+            $table->timestamps();
+
         });
     }
 
@@ -30,6 +33,6 @@ class CreateVenuesProgramsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('venues_programs');
+        Schema::dropIfExists('program_venue');
     }
 }

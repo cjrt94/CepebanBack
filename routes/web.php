@@ -15,6 +15,9 @@
 
 Route::get('/', 'HomeController@index');
 
+Route::get('/venue/{venue}', 'VenueController@getCp');
+
+
  Route::group(['middleware' => 'auth', 'prefix' => 'admin' ], function () {
 
  	  Route::get('/', 'BackController@index');

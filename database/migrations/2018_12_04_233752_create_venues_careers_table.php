@@ -13,7 +13,7 @@ class CreateVenuesCareersTable extends Migration
      */
     public function up()
     {
-        Schema::create('venues_careers', function (Blueprint $table) {
+        Schema::create('career_venue', function (Blueprint $table) {
             $table->integer('career_id')->unsigned();
             $table->integer('venue_id')->unsigned();
 
@@ -32,6 +32,6 @@ class CreateVenuesCareersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('venues_careers');
+        Schema::dropIfExists('career_venue');
     }
 }

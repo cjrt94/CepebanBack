@@ -4,28 +4,23 @@
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="img/x-icon" href="imagenes/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('front/css/style.css')}}" />
     <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/animate.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/estilos.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/font-awesome.min.css')}}">
 
-    <script type="text/javascript" src="{{asset('front/js/jquery.min.js')}}"></script>
+    <script  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
 
 
     <title>{{$contents[0]->title_page}}</title>
 
-
-
-   <script src="{{asset('front/js/youtube-modal-bootstrap.js')}}" type="text/javascript"></script>
-
   </head>
   <body>
-
-
-
 
   <section class="container-fluid h-100 principal">
       <div class="row btn-down">
@@ -104,35 +99,39 @@
 
                     <div class="form-group">
                       <label for="carrera">Sedes *</label>
-                      <select class="form-control" id="carrera">
+                      <select class="form-control"  onchange="javascript:filter(this.value);">
                         <option selected="checked">SELECCIONAR...</option>
                         @foreach($venues as $venue)
-                          <option value="{{$venue->id}}">{{$venue->name}}</option>
+                          <option value="{{$venue->id}}" >{{$venue->name}}</option>
                         @endforeach
                       </select>
                     </div>
 
                     <div class="form-group">
-                      <label for="carrera">Carrera *</label>
-                      <select class="form-control" id="carrera">
+                      <label for="carrera">Carrera / Cursos o Programas*</label>
+                      <select class="form-control" id="pandc">
                         <option selected="checked">SELECCIONAR...</option>
-                        <option>ADMINISTRACIÓN BANCARIA</option>
-                        <option>ADMINISTRACIÓN DE EMPRESAS</option>
-                        <option>CONTABILIDAD FINANZAS Y AUDITORÍA</option>
+
+                        <optgroup label="Carreras">
+                          @foreach($careers as $career)
+
+                                <option value="{{$career->id}}">{{$career->name}}</option>
+
+                         @endforeach
+                        </optgroup>
+
+                        <optgroup label="Cursos o Programas">
+                          @foreach($programs as $program)
+
+                                <option value="{{$program->id}}">{{$program->name}}</option>
+
+                         @endforeach
+                        </optgroup>
+
+
                       </select>
                     </div>
-                    <div class="form-group">
-                      <label for="programa">Curso o programa *</label>
-                      <select class="form-control" id="programa">
-                        <option selected="checked">SELECCIONAR...</option>
-                        <option>CAJERO PROMOTOR DE SERVICIOS  FINANCIEROS Y COMERCIALES</option>
-                        <option>CAJERO COMERCIAL</option>
-                        <option>ASISTENTE DE GERENCIA</option>
-                        <option>ASISTENTE CONTABLE</option>
-                        <option>GESTOR DE VENTAS</option>
-                        <option>GESTOR DE CRÉDITO Y COBRANZAS</option>
-                      </select>
-                    </div>
+
 
                     <div class="row">
                       <div class="container">
@@ -179,7 +178,6 @@
           </div>
       </div>
   </section>
-
 
   <section class="container-fluid h-100 cursos">
     <div class="row h-100">
@@ -445,12 +443,81 @@
 
   <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
 
-
-
   </body>
 
   <script src="{{asset('front/js/wow.js')}}"></script>
+
   <script>
     new WOW().init();
   </script>
+
+  <script>
+
+    function filter(type){
+
+
+      $.ajax({
+      // la URL para la petición
+      url : 'http://localhost:8000/venue/'+type,
+
+      // la información a enviar
+      // (también es posible utilizar una cadena de datos)
+      data : { id : 123 },
+
+      // especifica si será una petición POST o GET
+      type : 'GET',
+
+      // el tipo de información que se espera de respuesta
+      dataType : 'json',
+
+      // código a ejecutar si la petición es satisfactoria;
+      // la respuesta es pasada como argumento a la función
+      success : function(json) {
+
+        $('#pandc').empty();
+
+         careers= json['careers'];
+         programs= json['programs'];
+
+
+          $('#pandc').append("<optgroup label='Carreras'>");
+
+         $.each(careers, function(idx, obj) {
+             console.log(obj.name);
+             $('#pandc').append("<option value="+ ">" + obj.name + "</option>");
+          })
+
+          $('#pandc').append("</optgroup>");
+          $('#pandc').append("<optgroup label='Programas'>");
+
+
+          $.each(programs, function(idx, obj) {
+              console.log(obj.name);
+              $('#pandc').append("<option value="+ ">" + obj.name + "</option>");
+
+           })
+          $('#pandc').append("</optgroup>");
+
+      },
+
+      // código a ejecutar si la petición falla;
+      // son pasados como argumentos a la función
+      // el objeto de la petición en crudo y código de estatus de la petición
+      error : function(xhr, status) {
+          alert('Disculpe, existió un problema');
+          console.log(status);
+          console.log(xhr)
+      },
+
+      // código a ejecutar sin importar si la petición falló o no
+      complete : function(xhr, status) {
+
+      }
+      });
+
+    }
+
+  </script>
+
+
 </html>
