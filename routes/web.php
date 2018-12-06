@@ -22,7 +22,6 @@
 
 
 
-
  Route::group(['middleware' => 'auth', 'prefix' => 'admin'   ], function () {
 
  	  Route::get('/', 'BackController@index');
@@ -62,6 +61,8 @@
 
 });
 
-
+if (env('APP_ENV') === 'production') {
+    URL::forceSchema('https');
+}
 
 Auth::routes();
