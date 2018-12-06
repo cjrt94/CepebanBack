@@ -27,10 +27,10 @@
         <a href=""><img src="{{('front/imagenes/flecha-abajo.png')}}"></a>
       </div>
       <div class="row encabezado">
-        <div class="col-xs-2 col-sm-4 col-md-6 logo">
+        <div class="col-xs-2 col-sm-4 col-md-6  col-lg-7 logo">
           <img src="{{secure_asset('front/imagenes/logo.png')}}" class="img-fluid">
         </div>
-        <div class="col-xs-9 col-sm-8 col-md-6">
+        <div class="col-xs-9 col-sm-8 col-md-6 col-lg-5">
           <ul class="nav justify-content-end menu">
             <li class="nav-item align-self-right">
               <a class="nav-link" href="#">IR A LA WEB ANTERIOR</a>
