@@ -32,12 +32,10 @@
         </div>
         <div class="col-xs-9 col-sm-8 col-md-6">
           <ul class="nav justify-content-center menu">
-            <li class="nav-item align-self-center">
-              <a class="nav-link" href="#">INICIO</a>
+            <li class="nav-item align-self-right">
+              <a class="nav-link" href="#">IR A LA WEB ANTERIOR</a>
             </li>
-            <li class="nav-item align-self-center">
-              <a class="nav-link" href="#">CARRERAS Y PROGRAMAS</a>
-            </li>
+
           </ul>
         </div>
       </div>
@@ -58,10 +56,10 @@
                           -->
                           <div class="carousel-inner">
                             <div class="carousel-item active">
-                              <img src="{{asset('front/imagenes/octopus-1.png')}}" class="img-fluid">
+                              <img src="{{asset('front/imagenes/octopus-1.png')}}" class="img-fluid" width="70%" >
                             </div>
                             <div class="carousel-item">
-                              <img src="{{asset('front/imagenes/octopus-2.png')}}" class="img-fluid">
+                              <img src="{{asset('front/imagenes/octopus-2.png')}}" class="img-fluid"  width="70%">
                             </div>
                           </div>
                           <!--
@@ -87,19 +85,24 @@
                   <br>
                 </div>
                 <div class="row">
-                  <form class="w-100">
+                  <form class="w-100"  action="{{route('createLead')}}" method="post">
+
+                    @method('POST')
+                    @csrf
+
                     <div class="form-group">
                       <label for="nombres">Nombres *</label>
-                      <input type="email" class="form-control" id="nombres" aria-describedby="Nombres">
+                      <input type="text" class="form-control" id="nombres" required aria-describedby="Nombres" name="name">
                     </div>
+
                     <div class="form-group">
                       <label for="correo">Correo *</label>
-                      <input type="text" class="form-control" id="correo" aria-describedby="Correo">
+                      <input type="email" class="form-control" id="correo" required aria-describedby="Correo" name="email">
                     </div>
 
                     <div class="form-group">
                       <label for="carrera">Sedes *</label>
-                      <select class="form-control"  onchange="javascript:filter(this.value);">
+                      <select class="form-control"  name="venue" onchange="javascript:filter(this.value);">
                         <option selected="checked">SELECCIONAR...</option>
                         @foreach($venues as $venue)
                           <option value="{{$venue->id}}" >{{$venue->name}}</option>
@@ -108,14 +111,14 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="carrera">Carrera / Cursos o Programas*</label>
-                      <select class="form-control" id="pandc">
+                      <label for="carrera">Carreras / Cursos o Programas*</label>
+                      <select class="form-control" id="pandc" name="type">
                         <option selected="checked">SELECCIONAR...</option>
 
                         <optgroup label="Carreras">
                           @foreach($careers as $career)
 
-                                <option value="{{$career->id}}">{{$career->name}}</option>
+                                <option value="{{$career->name}}">{{$career->name}}</option>
 
                          @endforeach
                         </optgroup>
@@ -123,7 +126,7 @@
                         <optgroup label="Cursos o Programas">
                           @foreach($programs as $program)
 
-                                <option value="{{$program->id}}">{{$program->name}}</option>
+                                <option value="{{$program->name}}">{{$program->name}}</option>
 
                          @endforeach
                         </optgroup>
@@ -136,19 +139,19 @@
                     <div class="row">
                       <div class="container">
                         <div class="row">
-                          <div class="col-xs-6 col-sm-6 col-md-6">
-                            <button type="submit" class="btn btn-primary">Separar Vacante</button>
+                          <div class="col-xs-12 col-sm-12 col-md-12">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
                           </div>
-                          <div class="col-xs-6 col-sm-6 col-md-6">
-                            <button type="submit" class="btn btn-primary">Pedir Información</button>
-                          </div>
+
                         </div>
                       </div>
                     </div>
+
+                      </form>
                     <br>
                     <div class="row">
                       <div class="container">
-                        <p>Descubre más de todos nuestros cursos, programas y carreras. ¡No olvides registrarte y asegura tu vacante al éxito!</p>
+                        <p>Síguenos en todas nuestras redes y entérate de todo lo que tenemos para ti.<p>
                       </div>
                     </div>
 
@@ -171,8 +174,9 @@
                         </div>
                       </div>
                     </div>
-                  </form>
+
                 </div>
+
               </div>
             </div>
           </div>
@@ -239,139 +243,6 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <section class="container-fluid h-100 testimoniales">
-    <div class="row h-100 justify-content-center align-items-center">
-      <div class="col-md-12 text-center">
-        <h1>TESTIMONIALES</h1>
-        <p>Nuestros alumnos y egresados comparten con ustedes el orgullo de estudiar con nosotros.</p>
-        <p><span>Dale play y descúbrelos.</span></p>
-        <br><br>
-        <div class="row slider">
-          <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-              <!--
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
-              </ol>
-              -->
-              <div class="carousel-inner d-none d-sm-none d-md-none d-lg-block">
-                <div class="carousel-item active">
-                  <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              <!--responsive 2-->
-
-              <div class="carousel-inner d-none d-sm-none d-md-block d-lg-none">
-                <div class="carousel-item active">
-                  <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              <!--responsive 3-->
-
-              <div class="carousel-inner d-block d-sm-block d-md-none d-lg-none">
-                <div class="carousel-item active">
-                  <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -484,7 +355,12 @@
 
          $.each(careers, function(idx, obj) {
              console.log(obj.name);
-             $('#pandc').append("<option value="+ ">" + obj.name + "</option>");
+
+              var option = document.createElement("option");
+              option.value = obj.name;
+              option.text = obj.name;
+
+             $('#pandc').append(option);
           })
 
           $('#pandc').append("</optgroup>");
@@ -493,7 +369,12 @@
 
           $.each(programs, function(idx, obj) {
               console.log(obj.name);
-              $('#pandc').append("<option value="+ ">" + obj.name + "</option>");
+
+              var option = document.createElement("option");
+              option.value= obj.name;
+              option.text = obj.name;
+
+             $('#pandc').append(option);
 
            })
           $('#pandc').append("</optgroup>");

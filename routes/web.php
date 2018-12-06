@@ -17,6 +17,9 @@ Route::get('/', 'HomeController@index');
 
 Route::get('/venue/{venue}', 'VenueController@getCp');
 
+Route::post('/leads/create/', 'LeadController@create')->name('createLead');
+
+
 
  Route::group(['middleware' => 'auth', 'prefix' => 'admin' ], function () {
 
@@ -26,9 +29,6 @@ Route::get('/venue/{venue}', 'VenueController@getCp');
 		Route::get('/carreras', 'CareerController@index')->name('indexCareer');
 		Route::get('/carreras/editar/{career}', 'CareerController@edit')->name('editCareer');
 		Route::put('/career/update/{career}', 'CareerController@update')->name('updateCareer');
-
-
-
 
 		////Programs
 		Route::get('/programas', 'ProgramController@index')->name('indexProgram');
