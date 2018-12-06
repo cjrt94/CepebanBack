@@ -22,7 +22,7 @@
 
 
 
- Route::group(['middleware' => 'auth', 'prefix' => 'admin' , 'scheme' =>'https'  ], function () {
+ Route::group(['middleware' => 'auth', 'prefix' => 'admin'  ], function () {
 
  	  Route::get('/', 'BackController@index');
 
@@ -61,6 +61,6 @@
 
 });
 
- 
+
 
 Auth::routes();
