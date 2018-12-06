@@ -13,15 +13,17 @@
 
 
 
-Route::get('/', 'HomeController@index');
+ Route::group(['scheme' => 'https' ], function () {
+   Route::get('/', 'HomeController@index');
 
-Route::get('/venue/{venue}', 'VenueController@getCp');
+   Route::get('/venue/{venue}', 'VenueController@getCp' );
 
-Route::post('/leads/create/', 'LeadController@create')->name('createLead');
+   Route::post('/leads/create/', 'LeadController@create')->name('createLead');
+
+ });
 
 
-
- Route::group(['middleware' => 'auth', 'prefix' => 'admin' ], function () {
+ Route::group(['middleware' => 'auth', 'prefix' => 'admin' , 'scheme' => 'https' ], function () {
 
  	  Route::get('/', 'BackController@index');
 
