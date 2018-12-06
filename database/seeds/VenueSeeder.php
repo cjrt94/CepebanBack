@@ -11,7 +11,7 @@ class VenueSeeder extends Seeder
      */
     public function run()
     {
-          App\Venue::truncate();
+           
 
           $venue= new   App\Venue();
           $venue->name="Lince";

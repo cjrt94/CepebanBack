@@ -11,7 +11,7 @@ class ContentSeeder extends Seeder
      */
     public function run()
     {
-        App\Content::truncate();
+         
 
         $content= new   App\Content();
         $content->social_fa="https://www.facebook.com/CorporacionCepeban/";

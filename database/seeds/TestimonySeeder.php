@@ -11,8 +11,7 @@ class TestimonySeeder extends Seeder
      */
     public function run()
     {
-         App\Testimony::truncate();
-
+         
          $testimony= new  App\Testimony();
          $testimony->video_1 = "https://www.youtube.com/watch?v=aJOTlE1K90k";
          $testimony->video_2 = "https://www.youtube.com/watch?v=aJOTlE1K90k";

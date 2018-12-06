@@ -11,7 +11,7 @@ class ProgramSeeder extends Seeder
      */
     public function run()
     {
-         App\Program::truncate();
+
 
          $program= new  App\Program();
          $program->name="CAJERO PROMOTOR DE SERVICIOS FINANCIEROS Y COMERCIALES";
@@ -33,7 +33,7 @@ class ProgramSeeder extends Seeder
 
          $program= new  App\Program();
          $program->name="GESTOR DE VENTAS";
-         $program->description="Desarrolla habilidades para realizar labores propias del área comercia y ventas. 
+         $program->description="Desarrolla habilidades para realizar labores propias del área comercia y ventas.
 			 Procedimientos, técnicas y más para ventas efectivas.";
          $program->icon="ico-gestor-ventas.png";
          $program->save();
