@@ -11,7 +11,7 @@ class SliderSeeder extends Seeder
      */
     public function run()
     {
-         App\Slider::truncate();
+         
 
          $slider= new  App\Slider();
          $slider->description = "Imagen 1";
