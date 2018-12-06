@@ -130,27 +130,24 @@
                     </li>
 
                      <li >
-                        <a href="{{route('indexContent')}}"><i class="zmdi zmdi-settings"></i> Contenido</a>
+                        <a href="{{secure_url('admin/contenido')}}"><i class="zmdi zmdi-settings"></i> Contenido</a>
                     </li>
 
                     <li >
-                        <a href="{{route('indexLead')}}"><i class="zmdi zmdi-account"></i> Leads</a>
+                        <a href="{{secure_url('admin/leads')}}"><i class="zmdi zmdi-account"></i> Leads</a>
                     </li>
 
                     <li >
-                        <a href="{{route('indexCareer')}}"><i class="zmdi zmdi-flight-takeoff"></i> Carreras</a>
+                        <a href="{{secure_url('admin/carreras')}}"><i class="zmdi zmdi-flight-takeoff"></i> Carreras</a>
                     </li>
 
                     <li >
-                        <a href="{{route('indexProgram')}}"><i class="zmdi zmdi-floppy"></i> Programas</a>
+                        <a href="{{secure_url('admin/programas')}}"><i class="zmdi zmdi-floppy"></i> Programas</a>
                     </li>
 
-                    <li >
-                        <a href="{{route('indexTestimony')}}"><i class="zmdi zmdi-male"></i> Testimonios</a>
-                    </li>
 
                     <li >
-                        <a href="{{route('indexSlider')}}"><i class="zmdi zmdi-collection-image"></i> Sliders</a>
+                        <a href="{{secure_url('admin/sliders')}}"><i class="zmdi zmdi-collection-image"></i> Sliders</a>
                     </li>
 
 
