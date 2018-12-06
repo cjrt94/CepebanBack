@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Career' => $baseDir . '/app/Career.php',
+    'App\\CareerVenue' => $baseDir . '/app/CareerVenue.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Content' => $baseDir . '/app/Content.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
@@ -15,6 +16,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
+    'App\\Http\\Controllers\\BackController' => $baseDir . '/app/Http/Controllers/BackController.php',
     'App\\Http\\Controllers\\CareerController' => $baseDir . '/app/Http/Controllers/CareerController.php',
     'App\\Http\\Controllers\\ConfigurationController' => $baseDir . '/app/Http/Controllers/ConfigurationController.php',
     'App\\Http\\Controllers\\ContentController' => $baseDir . '/app/Http/Controllers/ContentController.php',
@@ -24,6 +26,7 @@ return array(
     'App\\Http\\Controllers\\ProgramController' => $baseDir . '/app/Http/Controllers/ProgramController.php',
     'App\\Http\\Controllers\\SliderController' => $baseDir . '/app/Http/Controllers/SliderController.php',
     'App\\Http\\Controllers\\TestimonyController' => $baseDir . '/app/Http/Controllers/TestimonyController.php',
+    'App\\Http\\Controllers\\VenueController' => $baseDir . '/app/Http/Controllers/VenueController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -34,6 +37,7 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Lead' => $baseDir . '/app/Lead.php',
     'App\\Program' => $baseDir . '/app/Program.php',
+    'App\\ProgramVenue' => $baseDir . '/app/ProgramVenue.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',

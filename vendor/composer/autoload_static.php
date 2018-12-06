@@ -339,6 +339,7 @@ class ComposerStaticInit91e7010351577a6d3c03c76cacf2f406
 
     public static $classMap = array (
         'App\\Career' => __DIR__ . '/../..' . '/app/Career.php',
+        'App\\CareerVenue' => __DIR__ . '/../..' . '/app/CareerVenue.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Content' => __DIR__ . '/../..' . '/app/Content.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -347,6 +348,7 @@ class ComposerStaticInit91e7010351577a6d3c03c76cacf2f406
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\BackController' => __DIR__ . '/../..' . '/app/Http/Controllers/BackController.php',
         'App\\Http\\Controllers\\CareerController' => __DIR__ . '/../..' . '/app/Http/Controllers/CareerController.php',
         'App\\Http\\Controllers\\ConfigurationController' => __DIR__ . '/../..' . '/app/Http/Controllers/ConfigurationController.php',
         'App\\Http\\Controllers\\ContentController' => __DIR__ . '/../..' . '/app/Http/Controllers/ContentController.php',
@@ -356,6 +358,7 @@ class ComposerStaticInit91e7010351577a6d3c03c76cacf2f406
         'App\\Http\\Controllers\\ProgramController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProgramController.php',
         'App\\Http\\Controllers\\SliderController' => __DIR__ . '/../..' . '/app/Http/Controllers/SliderController.php',
         'App\\Http\\Controllers\\TestimonyController' => __DIR__ . '/../..' . '/app/Http/Controllers/TestimonyController.php',
+        'App\\Http\\Controllers\\VenueController' => __DIR__ . '/../..' . '/app/Http/Controllers/VenueController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -366,6 +369,7 @@ class ComposerStaticInit91e7010351577a6d3c03c76cacf2f406
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Lead' => __DIR__ . '/../..' . '/app/Lead.php',
         'App\\Program' => __DIR__ . '/../..' . '/app/Program.php',
+        'App\\ProgramVenue' => __DIR__ . '/../..' . '/app/ProgramVenue.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
