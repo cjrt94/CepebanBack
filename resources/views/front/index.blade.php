@@ -31,7 +31,7 @@
           <img src="{{secure_asset('front/imagenes/logo.png')}}" class="img-fluid">
         </div>
         <div class="col-xs-9 col-sm-8 col-md-6">
-          <ul class="nav justify-content-center menu">
+          <ul class="nav justify-content-end menu">
             <li class="nav-item align-self-right">
               <a class="nav-link" href="#">IR A LA WEB ANTERIOR</a>
             </li>
