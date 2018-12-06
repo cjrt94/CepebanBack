@@ -57,16 +57,10 @@
 		Route::get('/sliders', 'SliderController@index')->name('indexSlider');
 		Route::put('/slider/update/', 'SliderController@update')->name('updateSlider');
 
-    if (env('APP_ENV') === 'production') {
-        URL::forceScheme('https');
-    }
-
 
 
 });
 
-if (env('APP_ENV') === 'production') {
-    URL::forceScheme('https');
-}
+ 
 
 Auth::routes();
