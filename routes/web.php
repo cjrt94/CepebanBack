@@ -20,9 +20,7 @@
 
    Route::post('/leads/create/', 'LeadController@create')->name('createLead');
 
-   if (env('APP_ENV') === 'production') {
-        URL::forceScheme('https');
-    }
+
 
  Route::group(['middleware' => 'auth', 'prefix' => 'admin'  ], function () {
 
@@ -63,6 +61,8 @@
 
 });
 
-
+if (env('APP_ENV') === 'production') {
+     URL::forceScheme('https');
+ }
 
 Auth::routes();
