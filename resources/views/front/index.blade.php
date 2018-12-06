@@ -4,11 +4,11 @@
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="img/x-icon" href="imagenes/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="{{asset('front/css/style.css')}}" />
-    <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/animate.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/estilos.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('front/css/style.css')}}" />
+    <link rel="stylesheet" href="{{secure_asset('front/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('front/css/animate.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('front/css/estilos.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('front/css/font-awesome.min.css')}}">
 
     <script  src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -24,11 +24,11 @@
 
   <section class="container-fluid h-100 principal">
       <div class="row btn-down">
-        <a href=""><img src="{{asset('front/imagenes/flecha-abajo.png')}}"></a>
+        <a href=""><img src="{{('front/imagenes/flecha-abajo.png')}}"></a>
       </div>
       <div class="row encabezado">
         <div class="col-xs-2 col-sm-4 col-md-6 logo">
-          <img src="{{asset('front/imagenes/logo.png')}}" class="img-fluid">
+          <img src="{{secure_asset('front/imagenes/logo.png')}}" class="img-fluid">
         </div>
         <div class="col-xs-9 col-sm-8 col-md-6">
           <ul class="nav justify-content-center menu">
@@ -56,10 +56,10 @@
                           -->
                           <div class="carousel-inner">
                             <div class="carousel-item active">
-                              <img src="{{asset('front/imagenes/octopus-1.png')}}" class="img-fluid" width="70%" >
+                              <img src="{{secure_asset('front/imagenes/octopus-1.png')}}" class="img-fluid" width="70%" >
                             </div>
                             <div class="carousel-item">
-                              <img src="{{asset('front/imagenes/octopus-2.png')}}" class="img-fluid"  width="70%">
+                              <img src="{{secure_asset('front/imagenes/octopus-2.png')}}" class="img-fluid"  width="70%">
                             </div>
                           </div>
                           <!--
@@ -193,7 +193,7 @@
         @foreach($careers as $career)
         <div class="row bloq">
           <div class="col-sm-3 col-md-3 col-lg-3">
-            <img src="{{asset('front/imagenes')}}/{{$career->icon}}" class="img-fluid">
+            <img src="{{secure_asset('front/imagenes')}}/{{$career->icon}}" class="img-fluid">
           </div>
           <div class="col-sm-9 col-md-9 col-lg-9">
             <div class="row align-items-center h-100">
@@ -223,7 +223,7 @@
           <div class="col-sm-12 col-md-6 col-lg-6 bloq">
             <div class="row">
               <div class="col-sm-3 col-md-4 col-lg-4">
-                <img src="{{asset('front/imagenes')}}/{{$program->icon}}" class="img-fluid">
+                <img src="{{secure_asset('front/imagenes')}}/{{$program->icon}}" class="img-fluid">
               </div>
               <div class="col-sm-9 col-md-8 col-lg-8">
                 <div class="row align-items-center h-100">
@@ -254,25 +254,25 @@
         <br>
             <ul class="nav justify-content-center">
               <li class="nav-item">
-                <img src="{{asset('front/imagenes/logo-bbva.png')}}" alt="">
+                <img src="{{secure_asset('front/imagenes/logo-bbva.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{asset('front/imagenes/bcp.png')}}" alt="">
+                <img src="{{secure_asset('front/imagenes/bcp.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{asset('front/imagenes/banbif.png')}}" alt="">
+                <img src="{{secure_asset('front/imagenes/banbif.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{asset('front/imagenes/falabella.png')}}" alt="">
+                <img src="{{secure_asset('front/imagenes/falabella.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{asset('front/imagenes/sodimac.png')}}" alt="">
+                <img src="{{secure_asset('front/imagenes/sodimac.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{asset('front/imagenes/ripley.png')}}" alt="">
+                <img src="{{secure_asset('front/imagenes/ripley.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{asset('front/imagenes/tottus.png')}}" alt="">
+                <img src="{{secure_asset('front/imagenes/tottus.png')}}" alt="">
               </li>
             </ul>
             <br>
@@ -281,7 +281,7 @@
     </div>
     <div class="row pie justify-content-center align-items-center">
       <div class="col-md-12 text-center">
-        <img src="{{asset('front/imagenes/logo-cepeban.png')}}" alt="" class="img-fluid">
+        <img src="{{secure_asset('front/imagenes/logo-cepeban.png')}}" alt="" class="img-fluid">
       </div>
     </div>
   </section>
@@ -312,11 +312,11 @@
 </div>
 <!-- Fin Modal -->
 
-  <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
+  <script src="{{secure_asset('front/js/bootstrap.min.js')}}"></script>
 
   </body>
 
-  <script src="{{asset('front/js/wow.js')}}"></script>
+  <script src="{{secure_asset('front/js/wow.js')}}"></script>
 
   <script>
     new WOW().init();
