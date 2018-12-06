@@ -55,10 +55,10 @@
                           </ol>
                           -->
                           <div class="carousel-inner">
-                            <div class="carousel-item active">
+                            <div class="carousel-item active text-center">
                               <img src="{{secure_asset('front/imagenes/octopus-1.png')}}" class="img-fluid" width="70%" >
                             </div>
-                            <div class="carousel-item">
+                            <div class="carousel-item text-center">
                               <img src="{{secure_asset('front/imagenes/octopus-2.png')}}" class="img-fluid"  width="70%">
                             </div>
                           </div>
