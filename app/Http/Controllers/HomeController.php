@@ -13,6 +13,13 @@ use App\Venue;
 
 class HomeController extends Controller{
 
+
+  public function __construct()
+  {
+      $this->middleware('auth');
+  }
+
+
   public function index(){
 
         $programs=  Program::all();
