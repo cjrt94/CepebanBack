@@ -13,12 +13,15 @@
 
 
 
+Route::group(['middleware' => 'guest'  ], function () {
 
    Route::get('/', 'HomeController@index');
 
    Route::get('/venue/{venue}', 'VenueController@getCp' );
 
    Route::post('/leads/create/', 'LeadController@create')->name('createLead');
+
+});
 
 
  Route::group(['middleware' => 'auth', 'prefix' => 'admin'  ], function () {
