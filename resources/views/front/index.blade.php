@@ -32,33 +32,29 @@
         </div>
         <div class="col-xs-9 col-sm-8 col-md-6 col-lg-5 d-none d-sm-none d-md-block d-lg-block">
           <ul class="nav justify-content-end menu">
-            <li class="nav-item align-self-right">
+            <li class="nav-item">
               <a class="nav-link" href="#">IR A LA WEB ANTERIOR</a>
             </li>
 
           </ul>
         </div>
       </div>
-      <div class="row h-100 justify-content-center align-items-center caja-alto">
-          <div class="container col-md-11">
-            <div class="row">
-              <div class="col-md-12 col-lg-7 bloq-izq">
-                <div class="row h-100">
-                  <div class="container col-md-12 h-100">
-                    <div class="row h-100 align-items-end">
-                      <div class="col-md-12 caja h-100">
-                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade mostrador h-100" data-ride="carousel" data-interval="4000">
+      <!---->
+      <div class="row h-100 caja-alto">
+        <div class="col-md-12 col-lg-7 h-100 bloq-izq">
+          <div class="row h-100 align-items-end">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade mostrador w-100" data-ride="carousel" data-interval="4000">
                           <!--
                           <ol class="carousel-indicators">
                           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                           </ol>
                           -->
-                          <div class="carousel-inner h-100">
-                            <div class="carousel-item active text-center h-100">
+                          <div class="carousel-inner text-center h-100">
+                            <div class="carousel-item active">
                               <img src="{{asset('front/imagenes/octopus-1.png')}}"    >
                             </div>
-                            <div class="carousel-item text-center h-100">
+                            <div class="carousel-item ">
                               <img src="{{asset('front/imagenes/octopus-2.png')}}"    >
                             </div>
                           </div>
@@ -73,19 +69,16 @@
                           </a>
                           -->
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-5 bloq-der">
-                <div class="row">
-                  <h2>REGÍSTRATE</h2>
-                  <p>Elige el curso, programa o carrera por el que quieras preguntar y separa tu vacante.</p>
-                  <br>
-                </div>
-                <div class="row">
-                  <form class="w-100"  action="{{route('createLead')}}" method="post">
+          </div>
+          
+        </div>
+        <div class="col-md-12 col-lg-5 h-100 bloq-der">
+          <div class="row h-100 align-items-center">
+            <div class="container">
+                    <h2>REGÍSTRATE</h2>
+                    <p>Elige el curso, programa o carrera por el que quieras preguntar y separa tu vacante.</p>
+                    <br>
+                    <form class="w-100"  action="{{route('createLead')}}" method="post">
 
                     @method('POST')
                     @csrf
@@ -148,39 +141,39 @@
                     </div>
 
                       </form>
-                    <br>
-                    <div class="row">
-                      <div class="container">
-                        <p>Síguenos en todas nuestras redes y entérate de todo lo que tenemos para ti.<p>
-                      </div>
+
+                      <br>
+                    <p>Síguenos en todas nuestras redes y entérate de todo lo que tenemos para ti.<p>
+                      <br>
+                    <div class="caja">
+                      <ul class="nav redes-sociales justify-content-center">
+                         <li class="nav-item align-self-center">
+                            <a class="nav-link" href="{{$contents[0]->social_fa}}"><i class="fa fa-facebook-f"></i></a>
+                        </li>
+                        <li class="nav-item align-self-center">
+                            <a class="nav-link" href="{{$contents[0]->social_ins}}"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li class="nav-item align-self-center">
+                            <a class="nav-link" href="{{$contents[0]->social_yt}}"><i class="fa fa-twitter"></i></a>
+                        </li>
+                      </ul>
                     </div>
 
-                    <div class="row">
-                      <div class="container h-100">
-                        <div class="row h-100 justify-content-center align-items-center">
-                          <div class="caja">
-                            <ul class="nav redes-sociales">
-                               <li class="nav-item align-self-center">
-                                  <a class="nav-link" href="{{$contents[0]->social_fa}}"><i class="fa fa-facebook-f"></i></a>
-                              </li>
-                              <li class="nav-item align-self-center">
-                                  <a class="nav-link" href="{{$contents[0]->social_ins}}"><i class="fa fa-instagram"></i></a>
-                              </li>
-                              <li class="nav-item align-self-center">
-                                  <a class="nav-link" href="{{$contents[0]->social_yt}}"><i class="fa fa-twitter"></i></a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
 
-                </div>
-
-              </div>
-            </div>
+                  </div>
           </div>
+          
+        </div>
+
+
+       
       </div>
+        
+
+
+
+      </div>
+      <!---->
   </section>
 
   <section class="container-fluid h-100 cursos">

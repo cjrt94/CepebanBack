@@ -11,7 +11,7 @@ class CareerSeeder extends Seeder
      */
     public function run()
     {
-        App\Career::truncate();
+        
 
         $career1= new   App\Career();
         $career1->name="-   Administración de Negocios Bancarios y Financieros – 3 años";
@@ -22,8 +22,9 @@ class CareerSeeder extends Seeder
 
         $career1= new   App\Career();
         $career1->name="-   Administración de Empresas - 3 años";
+
         $career1->description="Plantea propuestas innovadoras con visión de liderazgo a empresas y emprendimientos.
-            Sedes Lima, sede Huancayo";
+        Sedes Lima, sede Huancayo";
         $career1->icon="ico-administracion-empresas.png";
         $career1->save();
 
