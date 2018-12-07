@@ -11,15 +11,17 @@
 |
 */
 
+Auth::routes();
 
-
-
+Route::group(['middleware' => 'guest'], function () {
 
    Route::get('/', 'HomeController@index');
 
    Route::get('/venue/{venue}', 'VenueController@getCp' );
 
    Route::post('/leads/create/', 'LeadController@create')->name('createLead');
+
+});
 
 
 
@@ -36,11 +38,6 @@
 		Route::get('/programas', 'ProgramController@index')->name('indexProgram');
 		Route::get('/programas/editar/{program}', 'ProgramController@edit')->name('editProgram');
 		Route::put('/program/update/{program}', 'ProgramController@update')->name('updateProgram');
-
-
-		///Test
-		Route::get('/testimonios', 'TestimonyController@edit')->name('indexTestimony');
-		Route::put('/testimony/update/{testimony}', 'TestimonyController@update')->name('updateTestimony');
 
 
 		//Leads
@@ -61,7 +58,3 @@
 
 
 });
-
-
-
-Auth::routes();
