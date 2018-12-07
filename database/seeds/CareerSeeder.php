@@ -11,7 +11,7 @@ class CareerSeeder extends Seeder
      */
     public function run()
     {
-        App\Career::truncate();
+        
 
         $career1= new   App\Career();
         $career1->name="-   Administración de Negocios Bancarios y Financieros – 3 años";

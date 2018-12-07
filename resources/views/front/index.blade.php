@@ -4,11 +4,11 @@
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="img/x-icon" href="imagenes/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="{{secure_asset('front/css/style.css')}}" />
-    <link rel="stylesheet" href="{{secure_asset('front/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{secure_asset('front/css/animate.css')}}">
-    <link rel="stylesheet" href="{{secure_asset('front/css/estilos.css')}}">
-    <link rel="stylesheet" href="{{secure_asset('front/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('front/css/style.css')}}" />
+    <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/estilos.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/font-awesome.min.css')}}">
 
     <script  src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -28,38 +28,34 @@
       </div>
       <div class="row encabezado">
         <div class="col-xs-2 col-sm-4 col-md-6  col-lg-7 logo">
-          <img src="{{secure_asset('front/imagenes/logo.png')}}" class="img-fluid">
+          <img src="{{asset('front/imagenes/logo.png')}}" class="img-fluid">
         </div>
         <div class="col-xs-9 col-sm-8 col-md-6 col-lg-5 d-none d-sm-none d-md-block d-lg-block">
           <ul class="nav justify-content-end menu">
-            <li class="nav-item align-self-right">
+            <li class="nav-item">
               <a class="nav-link" href="#">IR A LA WEB ANTERIOR</a>
             </li>
 
           </ul>
         </div>
       </div>
-      <div class="row h-100 justify-content-center align-items-center caja-alto">
-          <div class="container col-md-11">
-            <div class="row">
-              <div class="col-md-12 col-lg-7 bloq-izq">
-                <div class="row h-100">
-                  <div class="container col-md-12 h-100">
-                    <div class="row h-100 align-items-end">
-                      <div class="col-md-12 caja">
-                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade mostrador" data-ride="carousel" data-interval="4000">
+      <!---->
+      <div class="row h-100 caja-alto">
+        <div class="col-md-12 col-lg-7 h-100 bloq-izq">
+          <div class="row h-100 align-items-end">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade mostrador w-100" data-ride="carousel" data-interval="4000">
                           <!--
                           <ol class="carousel-indicators">
                           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                           </ol>
                           -->
-                          <div class="carousel-inner">
-                            <div class="carousel-item active text-center">
-                              <img src="{{secure_asset('front/imagenes/octopus-1.png')}}" class="img-fluid" width="70%" >
+                          <div class="carousel-inner text-center h-100">
+                            <div class="carousel-item active">
+                              <img src="{{asset('front/imagenes/octopus-1.png')}}"    >
                             </div>
-                            <div class="carousel-item text-center">
-                              <img src="{{secure_asset('front/imagenes/octopus-2.png')}}" class="img-fluid"  width="70%">
+                            <div class="carousel-item ">
+                              <img src="{{asset('front/imagenes/octopus-2.png')}}"    >
                             </div>
                           </div>
                           <!--
@@ -73,19 +69,16 @@
                           </a>
                           -->
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-5 bloq-der">
-                <div class="row">
-                  <h2>REGÍSTRATE</h2>
-                  <p>Elige el curso, programa o carrera por el que quieras preguntar y separa tu vacante.</p>
-                  <br>
-                </div>
-                <div class="row">
-                  <form class="w-100"  action="{{route('createLead')}}" method="post">
+          </div>
+          
+        </div>
+        <div class="col-md-12 col-lg-5 h-100 bloq-der">
+          <div class="row h-100 align-items-center">
+            <div class="container">
+                    <h2>REGÍSTRATE</h2>
+                    <p>Elige el curso, programa o carrera por el que quieras preguntar y separa tu vacante.</p>
+                    <br>
+                    <form class="w-100"  action="{{route('createLead')}}" method="post">
 
                     @method('POST')
                     @csrf
@@ -148,39 +141,39 @@
                     </div>
 
                       </form>
-                    <br>
-                    <div class="row">
-                      <div class="container">
-                        <p>Síguenos en todas nuestras redes y entérate de todo lo que tenemos para ti.<p>
-                      </div>
+
+                      <br>
+                    <p>Síguenos en todas nuestras redes y entérate de todo lo que tenemos para ti.<p>
+                      <br>
+                    <div class="caja">
+                      <ul class="nav redes-sociales justify-content-center">
+                         <li class="nav-item align-self-center">
+                            <a class="nav-link" href="{{$contents[0]->social_fa}}"><i class="fa fa-facebook-f"></i></a>
+                        </li>
+                        <li class="nav-item align-self-center">
+                            <a class="nav-link" href="{{$contents[0]->social_ins}}"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li class="nav-item align-self-center">
+                            <a class="nav-link" href="{{$contents[0]->social_yt}}"><i class="fa fa-twitter"></i></a>
+                        </li>
+                      </ul>
                     </div>
 
-                    <div class="row">
-                      <div class="container h-100">
-                        <div class="row h-100 justify-content-center align-items-center">
-                          <div class="caja">
-                            <ul class="nav redes-sociales">
-                               <li class="nav-item align-self-center">
-                                  <a class="nav-link" href="{{$contents[0]->social_fa}}"><i class="fa fa-facebook-f"></i></a>
-                              </li>
-                              <li class="nav-item align-self-center">
-                                  <a class="nav-link" href="{{$contents[0]->social_ins}}"><i class="fa fa-instagram"></i></a>
-                              </li>
-                              <li class="nav-item align-self-center">
-                                  <a class="nav-link" href="{{$contents[0]->social_yt}}"><i class="fa fa-twitter"></i></a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
 
-                </div>
-
-              </div>
-            </div>
+                  </div>
           </div>
+          
+        </div>
+
+
+       
       </div>
+        
+
+
+
+      </div>
+      <!---->
   </section>
 
   <section class="container-fluid h-100 cursos">
@@ -193,7 +186,7 @@
         @foreach($careers as $career)
         <div class="row bloq">
           <div class="col-sm-3 col-md-3 col-lg-3">
-            <img src="{{secure_asset('front/imagenes')}}/{{$career->icon}}" class="img-fluid">
+            <img src="{{asset('front/imagenes')}}/{{$career->icon}}" class="img-fluid">
           </div>
           <div class="col-sm-9 col-md-9 col-lg-9">
             <div class="row align-items-center h-100">
@@ -223,7 +216,7 @@
           <div class="col-sm-12 col-md-6 col-lg-6 bloq">
             <div class="row">
               <div class="col-sm-3 col-md-4 col-lg-4">
-                <img src="{{secure_asset('front/imagenes')}}/{{$program->icon}}" class="img-fluid">
+                <img src="{{asset('front/imagenes')}}/{{$program->icon}}" class="img-fluid">
               </div>
               <div class="col-sm-9 col-md-8 col-lg-8">
                 <div class="row align-items-center h-100">
@@ -254,25 +247,25 @@
         <br>
             <ul class="nav justify-content-center">
               <li class="nav-item">
-                <img src="{{secure_asset('front/imagenes/logo-bbva.png')}}" alt="">
+                <img src="{{asset('front/imagenes/logo-bbva.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{secure_asset('front/imagenes/bcp.png')}}" alt="">
+                <img src="{{asset('front/imagenes/bcp.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{secure_asset('front/imagenes/banbif.png')}}" alt="">
+                <img src="{{asset('front/imagenes/banbif.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{secure_asset('front/imagenes/falabella.png')}}" alt="">
+                <img src="{{asset('front/imagenes/falabella.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{secure_asset('front/imagenes/sodimac.png')}}" alt="">
+                <img src="{{asset('front/imagenes/sodimac.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{secure_asset('front/imagenes/ripley.png')}}" alt="">
+                <img src="{{asset('front/imagenes/ripley.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{secure_asset('front/imagenes/tottus.png')}}" alt="">
+                <img src="{{asset('front/imagenes/tottus.png')}}" alt="">
               </li>
             </ul>
             <br>
@@ -281,7 +274,7 @@
     </div>
     <div class="row pie justify-content-center align-items-center">
       <div class="col-md-12 text-center">
-        <img src="{{secure_asset('front/imagenes/logo-cepeban.png')}}" alt="" class="img-fluid">
+        <img src="{{asset('front/imagenes/logo-cepeban.png')}}" alt="" class="img-fluid">
       </div>
     </div>
   </section>
@@ -312,11 +305,11 @@
 </div>
 <!-- Fin Modal -->
 
-  <script src="{{secure_asset('front/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
 
   </body>
 
-  <script src="{{secure_asset('front/js/wow.js')}}"></script>
+  <script src="{{asset('front/js/wow.js')}}"></script>
 
   <script>
     new WOW().init();

@@ -11,7 +11,7 @@ class ProgramSeeder extends Seeder
      */
     public function run()
     {
-         App\Program::truncate();
+          
 
          $program= new  App\Program();
          $program->name="CAJERO COMERCIAL - 3 meses";

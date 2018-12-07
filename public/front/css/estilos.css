@@ -87,8 +87,8 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 .bloq-izq img{
-width: 100%;
-max-width: 550px;
+width: auto;
+height: 700px;
 }
 
 .bloq-der{
@@ -393,6 +393,9 @@ max-width: 550px;
 
 /*:::::: RESPONSIVE :::::::*/
 
+
+
+
 @media screen and (max-width:1024px){
 	.carreras{
 		padding: 50px 30px 30px 30px;
@@ -425,6 +428,11 @@ max-width: 550px;
 	.programas .bloq p{
 		font-size: 12px;
 		line-height: 12px;
+	}
+
+	.bloq-izq img{
+		width: auto;
+		height: 600px;
 	}
 
 }
@@ -577,6 +585,11 @@ max-width: 550px;
 
 	.programas .bloq p{
 		text-align: center;
+	}
+
+	.bloq-izq img{
+		width: 90%;
+		height: auto;
 	}
 
 }
