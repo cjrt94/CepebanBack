@@ -4,50 +4,38 @@
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="img/x-icon" href="imagenes/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/animate.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/estilos.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{secure_asset('front/css/style.css')}}" />
+    <link rel="stylesheet" href="{{secure_asset('front/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('front/css/animate.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('front/css/estilos.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('front/css/font-awesome.min.css')}}">
 
-    <script type="text/javascript" src="{{asset('front/js/jquery.min.js')}}"></script>
+    <script  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
-    
+
 
     <title>{{$contents[0]->title_page}}</title>
-
-    
-
-   <script src="{{asset('front/js/youtube-modal-bootstrap.js')}}" type="text/javascript"></script>
-
-
-
-
-
 
   </head>
   <body>
 
-  
-
-
   <section class="container-fluid h-100 principal">
       <div class="row btn-down">
-        <a href=""><img src="{{asset('front/imagenes/flecha-abajo.png')}}"></a>
+        <a href=""><img src="{{('front/imagenes/flecha-abajo.png')}}"></a>
       </div>
       <div class="row encabezado">
-        <div class="col-xs-2 col-sm-4 col-md-6 logo">
-          <img src="{{asset('front/imagenes/logo.png')}}" class="img-fluid">
+        <div class="col-xs-2 col-sm-4 col-md-6  col-lg-7 logo">
+          <img src="{{secure_asset('front/imagenes/logo.png')}}" class="img-fluid">
         </div>
-        <div class="col-xs-9 col-sm-8 col-md-6">
-          <ul class="nav justify-content-center menu">
-            <li class="nav-item align-self-center">
-              <a class="nav-link" href="#">INICIO</a>
+        <div class="col-xs-9 col-sm-8 col-md-6 col-lg-5 d-none d-sm-none d-md-block d-lg-block">
+          <ul class="nav justify-content-end menu">
+            <li class="nav-item align-self-right">
+              <a class="nav-link" href="#">IR A LA WEB ANTERIOR</a>
             </li>
-            <li class="nav-item align-self-center">
-              <a class="nav-link" href="#">CARRERAS Y PROGRAMAS</a>
-            </li>
+
           </ul>
         </div>
       </div>
@@ -67,11 +55,11 @@
                           </ol>
                           -->
                           <div class="carousel-inner">
-                            <div class="carousel-item active">
-                              <img src="{{asset('front/imagenes/octopus-1.png')}}" class="img-fluid">
+                            <div class="carousel-item active text-center">
+                              <img src="{{secure_asset('front/imagenes/octopus-1.png')}}" class="img-fluid" width="70%" >
                             </div>
-                            <div class="carousel-item">
-                              <img src="{{asset('front/imagenes/octopus-2.png')}}" class="img-fluid">
+                            <div class="carousel-item text-center">
+                              <img src="{{secure_asset('front/imagenes/octopus-2.png')}}" class="img-fluid"  width="70%">
                             </div>
                           </div>
                           <!--
@@ -97,53 +85,73 @@
                   <br>
                 </div>
                 <div class="row">
-                  <form class="w-100">
+                  <form class="w-100"  action="{{route('createLead')}}" method="post">
+
+                    @method('POST')
+                    @csrf
+
                     <div class="form-group">
                       <label for="nombres">Nombres *</label>
-                      <input type="email" class="form-control" id="nombres" aria-describedby="Nombres">
+                      <input type="text" class="form-control" id="nombres" required aria-describedby="Nombres" name="name">
                     </div>
+
                     <div class="form-group">
                       <label for="correo">Correo *</label>
-                      <input type="text" class="form-control" id="correo" aria-describedby="Correo">
+                      <input type="email" class="form-control" id="correo" required aria-describedby="Correo" name="email">
                     </div>
+
                     <div class="form-group">
-                      <label for="carrera">Carrera *</label>
-                      <select class="form-control" id="carrera">
+                      <label for="carrera">Sedes *</label>
+                      <select class="form-control"  name="venue" onchange="javascript:filter(this.value);">
                         <option selected="checked">SELECCIONAR...</option>
-                        <option>ADMINISTRACIÓN BANCARIA</option>
-                        <option>ADMINISTRACIÓN DE EMPRESAS</option>
-                        <option>CONTABILIDAD FINANZAS Y AUDITORÍA</option>
+                        @foreach($venues as $venue)
+                          <option value="{{$venue->id}}" >{{$venue->name}}</option>
+                        @endforeach
                       </select>
                     </div>
+
                     <div class="form-group">
-                      <label for="programa">Curso o programa *</label>
-                      <select class="form-control" id="programa">
+                      <label for="carrera">Carreras / Cursos o Programas*</label>
+                      <select class="form-control" id="pandc" name="type">
                         <option selected="checked">SELECCIONAR...</option>
-                        <option>CAJERO PROMOTOR DE SERVICIOS  FINANCIEROS Y COMERCIALES</option>
-                        <option>CAJERO COMERCIAL</option>
-                        <option>ASISTENTE DE GERENCIA</option>
-                        <option>ASISTENTE CONTABLE</option>
-                        <option>GESTOR DE VENTAS</option>
-                        <option>GESTOR DE CRÉDITO Y COBRANZAS</option>
+
+                        <optgroup label="Carreras">
+                          @foreach($careers as $career)
+
+                                <option value="{{$career->name}}">{{$career->name}}</option>
+
+                         @endforeach
+                        </optgroup>
+
+                        <optgroup label="Cursos o Programas">
+                          @foreach($programs as $program)
+
+                                <option value="{{$program->name}}">{{$program->name}}</option>
+
+                         @endforeach
+                        </optgroup>
+
+
                       </select>
                     </div>
+
 
                     <div class="row">
                       <div class="container">
                         <div class="row">
-                          <div class="col-xs-6 col-sm-6 col-md-6">
-                            <button type="submit" class="btn btn-primary">Separar Vacante</button>
+                          <div class="col-xs-12 col-sm-12 col-md-12">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
                           </div>
-                          <div class="col-xs-6 col-sm-6 col-md-6">
-                            <button type="submit" class="btn btn-primary">Pedir Información</button>
-                          </div>
-                        </div>  
+
+                        </div>
                       </div>
                     </div>
+
+                      </form>
                     <br>
                     <div class="row">
                       <div class="container">
-                        <p>Descubre más de todos nuestros cursos, programas y carreras. ¡No olvides registrarte y asegura tu vacante al éxito!</p>
+                        <p>Síguenos en todas nuestras redes y entérate de todo lo que tenemos para ti.<p>
                       </div>
                     </div>
 
@@ -153,27 +161,27 @@
                           <div class="caja">
                             <ul class="nav redes-sociales">
                                <li class="nav-item align-self-center">
-                                  <a class="nav-link" href=""><i class="fa fa-facebook-f"></i></a>
+                                  <a class="nav-link" href="{{$contents[0]->social_fa}}"><i class="fa fa-facebook-f"></i></a>
                               </li>
                               <li class="nav-item align-self-center">
-                                  <a class="nav-link" href="#"><i class="fa fa-instagram"></i></a>
+                                  <a class="nav-link" href="{{$contents[0]->social_ins}}"><i class="fa fa-instagram"></i></a>
                               </li>
                               <li class="nav-item align-self-center">
-                                  <a class="nav-link" href=""><i class="fa fa-youtube"></i></a>
+                                  <a class="nav-link" href="{{$contents[0]->social_yt}}"><i class="fa fa-twitter"></i></a>
                               </li>
                             </ul>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </form>
+
                 </div>
+
               </div>
             </div>
           </div>
       </div>
   </section>
-
 
   <section class="container-fluid h-100 cursos">
     <div class="row h-100">
@@ -185,7 +193,7 @@
         @foreach($careers as $career)
         <div class="row bloq">
           <div class="col-sm-3 col-md-3 col-lg-3">
-            <img src="{{asset('front/imagenes')}}/{{$career->icon}}" class="img-fluid">
+            <img src="{{secure_asset('front/imagenes')}}/{{$career->icon}}" class="img-fluid">
           </div>
           <div class="col-sm-9 col-md-9 col-lg-9">
             <div class="row align-items-center h-100">
@@ -200,10 +208,10 @@
         </div>
         @endforeach
 
-    
-        
+
+
       </div>
-      
+
       <div class="col-md-12 col-lg-6 h-100 programas">
         <div class="row">
           <h1>Contamos con <span>6 programas</span> de rápida inserción laboral.</h1>
@@ -215,7 +223,7 @@
           <div class="col-sm-12 col-md-6 col-lg-6 bloq">
             <div class="row">
               <div class="col-sm-3 col-md-4 col-lg-4">
-                <img src="{{asset('front/imagenes')}}/{{$program->icon}}" class="img-fluid">
+                <img src="{{secure_asset('front/imagenes')}}/{{$program->icon}}" class="img-fluid">
               </div>
               <div class="col-sm-9 col-md-8 col-lg-8">
                 <div class="row align-items-center h-100">
@@ -231,143 +239,10 @@
           </div>
           <!--////////-->
           @endforeach
-          
+
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <section class="container-fluid h-100 testimoniales">
-    <div class="row h-100 justify-content-center align-items-center">
-      <div class="col-md-12 text-center">
-        <h1>TESTIMONIALES</h1>
-        <p>Nuestros alumnos y egresados comparten con ustedes el orgullo de estudiar con nosotros.</p>
-        <p><span>Dale play y descúbrelos.</span></p>
-        <br><br>
-        <div class="row slider">
-          <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-              <!--
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
-              </ol>
-              -->
-              <div class="carousel-inner d-none d-sm-none d-md-none d-lg-block">
-                <div class="carousel-item active">
-                  <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                  </div>
-                </div>
-               
-              </div>
-
-              <!--responsive 2-->
-
-              <div class="carousel-inner d-none d-sm-none d-md-block d-lg-none">
-                <div class="carousel-item active">
-                  <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                  </div>
-                </div>
-               
-              </div>
-
-              <!--responsive 3-->
-
-              <div class="carousel-inner d-block d-sm-block d-md-none d-lg-none">
-                <div class="carousel-item active">
-                  <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
-                          <img class="d-block w-100" src="//placehold.it/750x500/fff" alt="1 slide">
-                        </button>
-                    </div>
-                  </div>
-                </div>
-               
-              </div>
-
-              <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -379,25 +254,25 @@
         <br>
             <ul class="nav justify-content-center">
               <li class="nav-item">
-                <img src="{{asset('front/imagenes/logo-bbva.png')}}" alt="">
+                <img src="{{secure_asset('front/imagenes/logo-bbva.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{asset('front/imagenes/bcp.png')}}" alt="">
+                <img src="{{secure_asset('front/imagenes/bcp.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{asset('front/imagenes/banbif.png')}}" alt="">
+                <img src="{{secure_asset('front/imagenes/banbif.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{asset('front/imagenes/falabella.png')}}" alt="">
+                <img src="{{secure_asset('front/imagenes/falabella.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{asset('front/imagenes/sodimac.png')}}" alt="">
+                <img src="{{secure_asset('front/imagenes/sodimac.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{asset('front/imagenes/ripley.png')}}" alt="">
+                <img src="{{secure_asset('front/imagenes/ripley.png')}}" alt="">
               </li>
               <li class="nav-item">
-                <img src="{{asset('front/imagenes/tottus.png')}}" alt="">
+                <img src="{{secure_asset('front/imagenes/tottus.png')}}" alt="">
               </li>
             </ul>
             <br>
@@ -406,45 +281,124 @@
     </div>
     <div class="row pie justify-content-center align-items-center">
       <div class="col-md-12 text-center">
-        <img src="{{asset('front/imagenes/logo-cepeban.png')}}" alt="" class="img-fluid">
+        <img src="{{secure_asset('front/imagenes/logo-cepeban.png')}}" alt="" class="img-fluid">
       </div>
     </div>
   </section>
 
-  
+
   <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
 
-      
+
       <div class="modal-body">
 
        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
-        </button>        
+        </button>
         <!-- 16:9 aspect ratio -->
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
       </div>
-        
-        
+
+
       </div>
 
     </div>
   </div>
 
-</div> 
+</div>
 <!-- Fin Modal -->
-    
-  <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
 
-
+  <script src="{{secure_asset('front/js/bootstrap.min.js')}}"></script>
 
   </body>
 
-  <script src="{{asset('front/js/wow.js')}}"></script>
+  <script src="{{secure_asset('front/js/wow.js')}}"></script>
+
   <script>
     new WOW().init();
   </script>
+
+  <script>
+
+    function filter(type){
+
+
+      $.ajax({
+      // la URL para la petición
+      url : 'https://cepeban.herokuapp.com/venue/'+type,
+
+      // la información a enviar
+      // (también es posible utilizar una cadena de datos)
+      data : { id : 123 },
+
+      // especifica si será una petición POST o GET
+      type : 'GET',
+
+      // el tipo de información que se espera de respuesta
+      dataType : 'json',
+
+      // código a ejecutar si la petición es satisfactoria;
+      // la respuesta es pasada como argumento a la función
+      success : function(json) {
+
+        $('#pandc').empty();
+
+         careers= json['careers'];
+         programs= json['programs'];
+
+
+          $('#pandc').append("<optgroup label='Carreras'>");
+
+         $.each(careers, function(idx, obj) {
+             console.log(obj.name);
+
+              var option = document.createElement("option");
+              option.value = obj.name;
+              option.text = obj.name;
+
+             $('#pandc').append(option);
+          })
+
+          $('#pandc').append("</optgroup>");
+          $('#pandc').append("<optgroup label='Programas'>");
+
+
+          $.each(programs, function(idx, obj) {
+              console.log(obj.name);
+
+              var option = document.createElement("option");
+              option.value= obj.name;
+              option.text = obj.name;
+
+             $('#pandc').append(option);
+
+           })
+          $('#pandc').append("</optgroup>");
+
+      },
+
+      // código a ejecutar si la petición falla;
+      // son pasados como argumentos a la función
+      // el objeto de la petición en crudo y código de estatus de la petición
+      error : function(xhr, status) {
+          alert('Disculpe, existió un problema');
+          console.log(status);
+          console.log(xhr)
+      },
+
+      // código a ejecutar sin importar si la petición falló o no
+      complete : function(xhr, status) {
+
+      }
+      });
+
+    }
+
+  </script>
+
+
 </html>

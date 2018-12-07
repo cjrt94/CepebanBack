@@ -11,16 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
          $this->call(CareerSeeder::class);
          $this->call(ProgramSeeder::class);
          $this->call(TestimonySeeder::class);
          $this->call(ContentSeeder::class);
          $this->call(SliderSeeder::class);
-
-
-        factory(App\Lead::class)
-        ->times(40)
-        ->create();
+         $this->call(VenueSeeder::class);
 
 
     }

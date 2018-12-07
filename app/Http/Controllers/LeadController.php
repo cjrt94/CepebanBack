@@ -12,4 +12,12 @@ class LeadController extends Controller
     	$leads= Lead::orderBy('created_at','desc')->paginate(10);
     	return view('leads.app', ['leads' => $leads]);
     }
+
+    public function create(Request $request){
+
+      Lead::create($request->all());
+
+      return redirect('/');
+
+    }
 }

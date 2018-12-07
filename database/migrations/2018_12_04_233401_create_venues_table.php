@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLeadsTable extends Migration
+class CreateVenuesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateLeadsTable extends Migration
      */
     public function up()
     {
-        Schema::create('leads', function (Blueprint $table) {
+        Schema::create('venues', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
-            $table->string('email');
-            $table->string('venue');
-            $table->string('type');
-          
-
         });
     }
 
@@ -32,6 +27,6 @@ class CreateLeadsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('leads');
+        Schema::dropIfExists('venues');
     }
 }
