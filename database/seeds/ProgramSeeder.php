@@ -14,39 +14,44 @@ class ProgramSeeder extends Seeder
          App\Program::truncate();
 
          $program= new  App\Program();
-         $program->name="CAJERO PROMOTOR DE SERVICIOS FINANCIEROS Y COMERCIALES";
-         $program->description="Obtén todo lo necesario para realizar las funciones de cajero en todo tipo de negocios, comercios, empresas y entidades bancarias.";
+         $program->name="CAJERO COMERCIAL - 3 meses";
+         $program->description="Trabaja como cajero en centros comerciales del sector retail.
+Sede Lima, sede Huancayo, sede Huánuco, sede Iquitos, sede Pucallpa, sede Tarapoto.";
          $program->icon="ico-cajero-promotor.png";
          $program->save();
 
          $program= new  App\Program();
-         $program->name="ASISTENTE CONTABLE";
-         $program->description="Prepárate para ser parte de las soluciones del proceso contable, realiza análisis financieros y promueve soluciones eficientes.";
+         $program->name="-  CAJERO PROMOTOR DE SERVICIOS FINANCIEROS Y COMERCIALES - 6 meses";
+         $program->description="Podrás desempeñarte como cajero en negocios, comercios, empresas, entidades bancarias y más. 
+                Sedes Lima, sede Huancayo, sede Huánuco, sede Iquitos, sede Pucallpa, sede  Tarapoto.";
          $program->icon="ico-asistente-contable.png";
          $program->save();
 
          $program= new  App\Program();
-         $program->name="CAJERO COMERCIALES";
-         $program->description="Adquiere todos los conocimientos necesarios para realizar las labores de caja en centros comerciales y del sector retail.";
+         $program->name="ASISTENTE CONTABLE - 6 meses";
+         $program->description="Realiza todo tipo de análisis financieros y contables de manera eficiente.
+            Sedes Lima, sede Huánuco, sede Iquitos, sede Pucallpa, sede Tarapoto.";
          $program->icon="ico-cajero-comercial.png";
          $program->save();
 
          $program= new  App\Program();
-         $program->name="GESTOR DE VENTAS";
-         $program->description="Desarrolla habilidades para realizar labores propias del área comercia y ventas. 
-			 Procedimientos, técnicas y más para ventas efectivas.";
+         $program->name="GESTOR DE CRÉDITOS Y COBRANZAS - 6 meses";
+         $program->description="Gestiona de manera efectiva créditos y cobranzas para todo tipo de negocios.
+            Sedes Lima, sede Huancayo, sede Huánuco, sede Iquitos, sede Pucallpa, sede Tarapoto.";
          $program->icon="ico-gestor-ventas.png";
          $program->save();
 
          $program= new  App\Program();
-         $program->name="ASISTENTE DE GERENCIA";
-         $program->description="Maneja técnicas y herramientas necesarias en banca, gestión y finanzas para realizar funciones de apoyo a la gerencia.";
+         $program->name="-  ASISTENTE DE GERENCIA - 6 meses";
+         $program->description="Adquiere los conocimientos necesarios para apoyar a los gerentes.  
+            Sedes Lima";
          $program->icon="ico-asistente-gerencia.png";
          $program->save();
 
           $program= new  App\Program();
-         $program->name="GESTOR DE CRÉDITO Y COBRANZAS";
-         $program->description="Adquiere los conocimientos necesarios para gestionar de manera efectiva créditos y cobranzas en el entorno competitivo actual.";
+         $program->name="-  GESTOR DE VENTAS - 6 meses";
+         $program->description="Aprende procedimientos y técnicas de venta efectivas.
+            Sedes Lima, Pucallpa.";
          $program->icon="ico-gestor-credito.png";
          $program->save();
 
