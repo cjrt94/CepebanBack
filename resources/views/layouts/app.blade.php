@@ -11,22 +11,22 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 	 <!-- Vendor CSS -->
-    <link href="{{ secure_asset('vendors/bower_components/fullcalendar/dist/fullcalendar.min.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('vendors/bower_components/animate.css/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('vendors/bower_components/sweetalert/dist/sweetalert.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('vendors/bootgrid/jquery.bootgrid.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('vendors/bower_components/fullcalendar/dist/fullcalendar.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendors/bower_components/animate.css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendors/bower_components/sweetalert/dist/sweetalert.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendors/bootgrid/jquery.bootgrid.min.css')}}" rel="stylesheet">
 
-    <link href="{{secure_asset('vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('vendors/farbtastic/farbtastic.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('vendors/bower_components/chosen/chosen.css') }}" rel="stylesheet">
+    <link href="{{asset('vendors/bower_components/bootstrap-select/dist/css/bootstrap-select.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendors/farbtastic/farbtastic.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendors/bower_components/chosen/chosen.css') }}" rel="stylesheet">
 
 
-    <link href="{{ secure_asset('vendors/summernote/dist/summernote.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendors/summernote/dist/summernote.css') }}" rel="stylesheet">
 
 	<!-- CSS -->
-    <link href="{{ secure_asset('css/inc/app_1.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('css/inc/app_2.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/inc/app_1.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/inc/app_2.css') }}" rel="stylesheet">
 
 
 </head>
@@ -169,38 +169,38 @@
             </div>
         </div>
 
-	   <script src="{{ secure_asset('vendors/bower_components/jquery/dist/jquery.min.js') }}"></script>
-	  <script src="{{ secure_asset('vendors/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+	   <script src="{{ asset('vendors/bower_components/jquery/dist/jquery.min.js') }}"></script>
+	  <script src="{{ asset('vendors/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 
-        <script src="{{ secure_asset('vendors/bower_components/flot/jquery.flot.js') }}"></script>
-        <script src="{{ secure_asset('vendors/bower_components/flot/jquery.flot.resize.js') }}"></script>
-        <script src="{{ secure_asset('vendors/bower_components/flot.curvedlines/curvedLines.js') }}"></script>
-        <script src="{{ secure_asset('vendors/sparklines/jquery.sparkline.min.js') }}"></script>
-
-
-
-
-        <script src="{{ secure_asset('vendors/bower_components/Waves/dist/waves.min.js') }}"></script>
-        <script src="{{ secure_asset('vendors/bootstrap-growl/bootstrap-growl.min.js') }}"></script>
-        <script src="{{ secure_asset('vendors/bower_components/sweetalert/dist/sweetalert.min.js')}}"></script>
-        <script src="{{ secure_asset('vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
-        <script src="{{ secure_asset('vendors/summernote/dist/summernote-updated.min.js')}}"></script>
-
-
-
-        <script src="{{ secure_asset('vendors/bower_components/moment/min/moment.min.js')}}"></script>
-
-         <script src="{{ secure_asset('vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js')}}"></script>
+        <script src="{{ asset('vendors/bower_components/flot/jquery.flot.js') }}"></script>
+        <script src="{{ asset('vendors/bower_components/flot/jquery.flot.resize.js') }}"></script>
+        <script src="{{ asset('vendors/bower_components/flot.curvedlines/curvedLines.js') }}"></script>
+        <script src="{{ asset('vendors/sparklines/jquery.sparkline.min.js') }}"></script>
 
 
 
 
-        <script src="{{ secure_asset('vendors/bower_components/chosen/chosen.jquery.js')}}"></script>
-        <script src="{{ secure_asset('vendors/fileinput/fileinput.min.js')}}"></script>
-        <script src="{{ secure_asset('vendors/input-mask/input-mask.min.js')}}"></script>
-        <script src="{{ secure_asset('vendors/farbtastic/farbtastic.min.js')}}"></script>
+        <script src="{{ asset('vendors/bower_components/Waves/dist/waves.min.js') }}"></script>
+        <script src="{{ asset('vendors/bootstrap-growl/bootstrap-growl.min.js') }}"></script>
+        <script src="{{ asset('vendors/bower_components/sweetalert/dist/sweetalert.min.js')}}"></script>
+        <script src="{{ asset('vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+        <script src="{{ asset('vendors/summernote/dist/summernote-updated.min.js')}}"></script>
 
-	    <script src="{{ secure_asset('js/app.min.js') }}"></script>
+
+
+        <script src="{{ asset('vendors/bower_components/moment/min/moment.min.js')}}"></script>
+
+         <script src="{{ asset('vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js')}}"></script>
+
+
+
+
+        <script src="{{ asset('vendors/bower_components/chosen/chosen.jquery.js')}}"></script>
+        <script src="{{ asset('vendors/fileinput/fileinput.min.js')}}"></script>
+        <script src="{{ asset('vendors/input-mask/input-mask.min.js')}}"></script>
+        <script src="{{ asset('vendors/farbtastic/farbtastic.min.js')}}"></script>
+
+	    <script src="{{ asset('js/app.min.js') }}"></script>
 
 
 
