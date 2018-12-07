@@ -21,7 +21,6 @@
    Route::post('/leads/create/', 'LeadController@create')->name('createLead');
 
 
-
  Route::group(['middleware' => 'auth', 'prefix' => 'admin'  ], function () {
 
  	  Route::get('/', 'BackController@index');
