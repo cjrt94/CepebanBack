@@ -24,8 +24,6 @@
 
     <link href="{{ secure_asset('vendors/summernote/dist/summernote.css') }}" rel="stylesheet">
 
-
-
 	<!-- CSS -->
     <link href="{{ secure_asset('css/inc/app_1.css') }}" rel="stylesheet">
     <link href="{{ secure_asset('css/inc/app_2.css') }}" rel="stylesheet">
@@ -130,7 +128,7 @@
                     </li>
 
                      <li >
-                        <a href="{{secure_url('admin/contenido')}}"><i class="zmdi zmdi-settings"></i> Contenido</a>
+                        <a href="{{secure_url('admin/contenidos')}}"><i class="zmdi zmdi-settings"></i> Contenido</a>
                     </li>
 
                     <li >
