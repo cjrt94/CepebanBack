@@ -46,20 +46,20 @@
                 <div class="row h-100">
                   <div class="container col-md-12 h-100">
                     <div class="row h-100 align-items-end">
-                      <div class="col-md-12 caja">
-                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade mostrador" data-ride="carousel" data-interval="4000">
+                      <div class="col-md-12 caja h-100">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade mostrador h-100" data-ride="carousel" data-interval="4000">
                           <!--
                           <ol class="carousel-indicators">
                           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                           </ol>
                           -->
-                          <div class="carousel-inner">
-                            <div class="carousel-item active text-center">
-                              <img src="{{secure_asset('front/imagenes/octopus-1.png')}}" class="img-fluid" width="70%" >
+                          <div class="carousel-inner h-100">
+                            <div class="carousel-item active text-center h-100">
+                              <img src="{{secure_asset('front/imagenes/octopus-1.png')}}"    >
                             </div>
                             <div class="carousel-item text-center">
-                              <img src="{{secure_asset('front/imagenes/octopus-2.png')}}" class="img-fluid"  width="70%">
+                              <img src="{{secure_asset('front/imagenes/octopus-2.png')}}"    >
                             </div>
                           </div>
                           <!--
