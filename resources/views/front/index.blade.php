@@ -23,10 +23,12 @@
   <body>
 
   <section class="container-fluid h-100 principal">
-      <div class="row btn-down">
-        <a href=""><img src="{{('front/imagenes/flecha-abajo.png')}}"></a>
+
+      <div class="row btn-down" style="z-index: 100">
+        <a href="#careers"><img src="{{('front/imagenes/flecha-abajo.png')}}"></a>
       </div>
-      <div class="row encabezado">
+
+      <div class="row encabezado" style="z-index: 99">
         <div class="col-xs-2 col-sm-4 col-md-6  col-lg-7 logo">
           <img src="{{asset('front/imagenes/logo.png')}}" class="img-fluid">
         </div>
@@ -40,7 +42,7 @@
         </div>
       </div>
       <!---->
-      <div class="row h-100 caja-alto">
+      <div class="row h-100 caja-alto" style="z-index: -1">
         <div class="col-md-12 col-lg-7 h-100 bloq-izq">
           <div class="row h-100 align-items-end">
             <div id="carouselExampleIndicators" class="carousel slide carousel-fade mostrador w-100" data-ride="carousel" data-interval="4000">
@@ -70,7 +72,7 @@
                           -->
                         </div>
           </div>
-          
+
         </div>
         <div class="col-md-12 col-lg-5 h-100 bloq-der">
           <div class="row h-100 align-items-center">
@@ -162,23 +164,21 @@
 
                   </div>
           </div>
-          
+
         </div>
 
 
-       
+
       </div>
-        
-
-
 
       </div>
       <!---->
   </section>
 
-  <section class="container-fluid h-100 cursos">
+  <section class="container-fluid cursos" id="careers">
     <div class="row h-100">
-      <div class="col-md-12 col-lg-6 h-100 carreras">
+
+      <div class="col-md-12 col-lg-6 carreras">
         <div class="row">
           <h1>Contamos con <span>3 carreras</span> de 3 años de duración.</h1>
         </div>
@@ -200,8 +200,6 @@
           </div>
         </div>
         @endforeach
-
-
 
       </div>
 
@@ -390,6 +388,30 @@
       });
 
     }
+
+  </script>
+
+  <script type="text/javascript">
+
+  $(function(){
+
+    $(document).ready(function() {
+    $('a[href^="#"]').click(function() {
+      var destino = $(this.hash);
+      if (destino.length == 0) {
+        destino = $('a[name="' + this.hash.substr(1) + '"]');
+      }
+      if (destino.length == 0) {
+        destino = $('html');
+      }
+      $('html, body').animate({ scrollTop: destino.offset().top }, 500);
+      return false;
+    });
+  });
+
+
+  });
+
 
   </script>
 
