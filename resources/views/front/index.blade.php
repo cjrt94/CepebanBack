@@ -150,13 +150,13 @@
                     <div class="caja">
                       <ul class="nav redes-sociales justify-content-center">
                          <li class="nav-item align-self-center">
-                            <a class="nav-link" href="{{$contents[0]->social_fa}}"><i class="fa fa-facebook-f"></i></a>
+                            <a class="nav-link" href="{{$contents[0]->social_fa}}" target="_blank"><i class="fa fa-facebook-f"></i></a>
                         </li>
                         <li class="nav-item align-self-center">
-                            <a class="nav-link" href="{{$contents[0]->social_ins}}"><i class="fa fa-instagram"></i></a>
+                            <a class="nav-link" href="{{$contents[0]->social_ins}}"  target="_blank"><i class="fa fa-instagram"></i></a>
                         </li>
                         <li class="nav-item align-self-center">
-                            <a class="nav-link" href="{{$contents[0]->social_yt}}"><i class="fa fa-twitter"></i></a>
+                            <a class="nav-link" href="{{$contents[0]->social_yt}}" target="_blank" ><i class="fa fa-twitter"></i></a>
                         </li>
                       </ul>
                     </div>
