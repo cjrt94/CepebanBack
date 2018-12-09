@@ -585,9 +585,19 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 }
 
-
 .bloq-izq img {
-	 margin-top: calc(10%);
+	 margin-top: 10%;
 	 width: auto;
-	 height: calc(90%);
+	 height: 90%;
+}
+
+
+@media screen and (max-width:991px){
+
+	.bloq-izq img {
+		 margin-top: calc(10%);
+		 width: 90%;
+		 height: auto;
+	}
+
 }
