@@ -86,10 +86,6 @@ h1, h2, h3, h4, h5, h6, a, p {
 	margin: 0 auto;
 }
 
-.bloq-izq img{
-width: auto;
-height: 700px;
-}
 
 .bloq-der{
 	padding: 40px 60px;
@@ -393,12 +389,8 @@ height: 700px;
 
 /*:::::: RESPONSIVE :::::::*/
 
-@media screen and (max-width:1400px){
-	.bloq-izq img{
-		width: auto;
-		height: 550px;
-	}
-}
+
+
 
 
 @media screen and (max-width:1024px){
@@ -435,10 +427,7 @@ height: 700px;
 		line-height: 12px;
 	}
 
-	.bloq-izq img{
-		width: auto;
-		height: 600px;
-	}
+
 
 }
 
@@ -592,14 +581,13 @@ height: 700px;
 		text-align: center;
 	}
 
-	.bloq-izq img{
-		width: 90%;
-		height: auto;
-	}
+
 
 }
 
 
-@media screen and (max-width:380px){
-
+.bloq-izq img {
+	 margin-top: calc(10%);
+	 width: auto;
+	 height: calc(90%);
 }

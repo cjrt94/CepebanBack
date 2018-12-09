@@ -50,32 +50,18 @@
       <div class="row h-100 caja-alto" style="z-index: -1">
         <div class="col-md-12 col-lg-7 h-100 bloq-izq">
           <div class="row h-100 align-items-end">
-            <div id="carouselExampleIndicators" class="carousel slide carousel-fade mostrador w-100" data-ride="carousel" data-interval="4000">
-                          <!--
-                          <ol class="carousel-indicators">
-                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                          </ol>
-                          -->
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade mostrador w-100 h-100" data-ride="carousel" data-interval="1111114000">
+
                           <div class="carousel-inner text-center h-100">
-                            <div class="carousel-item active">
-                              <img src="{{asset('front/imagenes/octopus-1.png')}}"    >
+                            <div class="carousel-item active h-100">
+                              <img src="{{asset('front/imagenes/octopus-1.png')}}" class="align-items-end"   >
                             </div>
-                            <div class="carousel-item ">
+                            <div class="carousel-item h-100">
                               <img src="{{asset('front/imagenes/octopus-2.png')}}"    >
                             </div>
                           </div>
-                          <!--
-                          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Previous</span>
-                          </a>
-                          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="sr-only">Next</span>
-                          </a>
-                          -->
-                        </div>
+
+              </div>
           </div>
 
         </div>
