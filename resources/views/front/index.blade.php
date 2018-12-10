@@ -29,8 +29,8 @@
 
   <section class="container-fluid h-100 principal">
 
-      <div class="row btn-down" style="z-index: 100">
-        <a href="#careers"><img src="{{('front/imagenes/flecha-abajo.png')}}"></a>
+      <div class="row btn-down" style="z-index: 100"  >
+        <a href="#careers" ><img src="{{('front/imagenes/flecha-abajo.png')}}" class="wow fadeInDown" data-wow-duration="4000"  data-wow-iteration="100000"></a>
       </div>
 
       <div class="row encabezado" style="z-index: 99">
@@ -50,7 +50,7 @@
       <div class="row h-100 caja-alto" style="z-index: -1">
         <div class="col-md-12 col-lg-7 h-100 bloq-izq">
           <div class="row h-100 align-items-end">
-            <div id="carouselExampleIndicators" class="carousel slide carousel-fade mostrador w-100 h-100" data-ride="carousel" data-interval="1111114000">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade mostrador w-100 h-100" data-ride="carousel" data-interval="4000">
 
                           <div class="carousel-inner text-center h-100">
                             <div class="carousel-item active h-100">
