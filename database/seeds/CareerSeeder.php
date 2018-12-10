@@ -11,28 +11,30 @@ class CareerSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         $career1= new   App\Career();
-        $career1->name="-   Administración de Negocios Bancarios y Financieros – 3 años";
-        $career1->description="Gestiona, identifica y aporta soluciones con visión global a los distintos procesos del mundo de la banca.
-            Sedes Lima, sede Huancayo, sede Pucallpa, sede Tarapoto";
+        $career1->name="Adm. De negocios bancarios y financieros";
+        $career1->description="Gestiona y desarrolla soluciones con visión global a todos los procesos de la banca y finanzas.
+        4 certificaciones progresivas de Cepeban y el Ministerio de Educación.
+        Solo en sedes Lima, Huancayo, Pucallpa y Tarapoto.";
         $career1->icon="ico-administracion-bancaria.png";
         $career1->save();
 
         $career1= new   App\Career();
-        $career1->name="-   Administración de Empresas - 3 años";
-
+        $career1->name="Administración de Empresas";
         $career1->description="Plantea propuestas innovadoras con visión de liderazgo a empresas y emprendimientos.
-        Sedes Lima, sede Huancayo";
+        3 certificaciones progresivas del Ministerio de Educación.
+        Solo en sedes Lima y Huancayo.";
         $career1->icon="ico-administracion-empresas.png";
         $career1->save();
 
 
          $career1= new   App\Career();
-        $career1->name="-   Contabilidad, Finanzas y Auditoría – 3 años";
+        $career1->name="Contabilidad, Finanzas y Auditoría";
         $career1->description="Gestiona operaciones contables y brinda soluciones acertadas en temas financieros y tributarios.
-            Sedes Lima, sede Huancayo, sede Tarapoto";
+        3 certificaciones progresivas del Ministerio de Educación.
+        Solo en sedes Lima, Huancayo y Tarapoto.";
         $career1->icon="ico-contabilidad-finanzas-auditoria.png";
         $career1->save();
 

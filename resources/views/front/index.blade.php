@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
+
   <head>
      <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,9 +16,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{asset('front/imagenes/favicon-96x96.png')}}">
 
 
-    <script  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+    <script  src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Comfortaa" />
 
@@ -25,6 +24,7 @@
     <title>{{$contents[0]->title_page}}</title>
 
   </head>
+
   <body>
 
   <section class="container-fluid h-100 principal">
@@ -40,7 +40,7 @@
         <div class="col-xs-9 col-sm-8 col-md-6 col-lg-5 d-none d-sm-none d-md-block d-lg-block">
           <ul class="nav justify-content-end menu">
             <li class="nav-item">
-              <a class="nav-link" href="#">IR A LA WEB ANTERIOR</a>
+              <a class="nav-link" href="#">VISITAR WEB ANTERIOR</a>
             </li>
 
           </ul>
@@ -101,7 +101,7 @@
                       <select class="form-control" id="pandc" name="type">
                         <option selected="checked">SELECCIONAR...</option>
 
-                        <optgroup label="Carreras">
+                        <optgroup label="Carreras  - Duración 3 años">
                           @foreach($careers as $career)
 
                                 <option value="{{$career->name}}">{{$career->name}}</option>
@@ -109,7 +109,7 @@
                          @endforeach
                         </optgroup>
 
-                        <optgroup label="Cursos o Programas">
+                        <optgroup label="Cursos o Programas - Duración de 3 a 6 meses">
                           @foreach($programs as $program)
 
                                 <option value="{{$program->name}}">{{$program->name}}</option>

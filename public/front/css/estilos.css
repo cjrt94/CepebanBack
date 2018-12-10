@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 .logo img{
 	display: block;
-	margin: 0 auto;
+	margin-left: 20px;
 }
 
 .menu li a{
@@ -322,7 +322,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 	font-size: 40px;
 	color: #eb1224;
 	font-weight: bold;
-	text-decoration: underline;
+ 
 	margin-bottom: 30px;
 }
 
