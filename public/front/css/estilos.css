@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 .menu li a{
 	color: #eb1224;
 	font-family: kodchasan-bold-1, kodchasan-bold-2, arial;
-	font-size: 20px;
+	font-size: 15px;
 	background: #fff;
 	border-radius: 10px;
 	padding: 10px 15px;
@@ -541,9 +541,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 		width: 100px !important;
 	}
 
-	.menu {
-		display: none;
-	}
+
 
 	.redes-sociales li a i{
 		width: 35px;

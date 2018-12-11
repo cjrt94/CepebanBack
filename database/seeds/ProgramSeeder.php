@@ -17,7 +17,7 @@ class ProgramSeeder extends Seeder
          $program->name="Cajero Comercial";
          $program->description="Conviértete en cajero de los principales centros comerciales del país.
          Duración: 3 meses.
-         Solo en sedes Lima, Huancayo, Huánuco, Iquitos, Pucallpa y Tarapoto.";
+         <strong>Solo en sedes Lima, Huancayo, Huánuco, Iquitos, Pucallpa y Tarapoto.</strong>";
 
          $program->icon="ico-cajero-promotor.png";
          $program->save();
@@ -27,7 +27,7 @@ class ProgramSeeder extends Seeder
 
          $program->description="Podrás desempeñarte como cajero en negocios, comercios, empresas, entidades bancarias y más.
          Duración: 6 meses.
-         Solo en sedes Lima, Huancayo, Huánuco, Iquitos, Pucallpa y Tarapoto.";
+         <strong>Solo en sedes Lima, Huancayo, Huánuco, Iquitos, Pucallpa y Tarapoto.</strong>";
          $program->icon="ico-asistente-contable.png";
          $program->save();
 
@@ -35,7 +35,7 @@ class ProgramSeeder extends Seeder
          $program->name="Asistente Contable";
          $program->description="Realiza todo tipo de análisis financieros y contables de manera eficiente.
          Duración: 6 meses.
-         Solo en sedes Lima, Huánuco, Iquitos, Pucallpa y Tarapoto.";
+         <strong>Solo en sedes Lima, Huánuco, Iquitos, Pucallpa y Tarapoto.</strong>";
          $program->icon="ico-cajero-comercial.png";
          $program->save();
 
@@ -43,7 +43,7 @@ class ProgramSeeder extends Seeder
          $program->name="Gestor de créditos y cobranzas";
          $program->description="Gestiona de manera efectiva créditos y cobranzas para todo tipo de negocios.
          Duración: 6 meses.
-         Solo en sedes Lima, Huancayo, Huánuco, Iquitos, Pucallpa y Tarapoto.";
+         <strong>Solo en sedes Lima, Huancayo, Huánuco, Iquitos, Pucallpa y Tarapoto.</strong>";
          $program->icon="ico-gestor-ventas.png";
          $program->save();
 
@@ -52,7 +52,7 @@ class ProgramSeeder extends Seeder
 
          $program->description="Adquiere todas las herramientas para apoyar a la alta gerencia de manera eficiente.
          Duración: 6 meses.
-         Solo en Lima";
+         <strong>Solo en Lima<strong>";
          $program->icon="ico-asistente-gerencia.png";
          $program->save();
 
@@ -60,7 +60,7 @@ class ProgramSeeder extends Seeder
          $program->name="Gestor de Ventas";
          $program->description="Domina procedimientos y técnicas de venta efectivas
          Duración: 6 meses
-         Solo en Lima y Pucallpa.";
+         <strong>Solo en Lima y Pucallpa.</strong>";
          $program->icon="ico-gestor-credito.png";
          $program->save();
 

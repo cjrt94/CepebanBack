@@ -34,10 +34,10 @@
       </div>
 
       <div class="row encabezado" style="z-index: 99">
-        <div class="col-xs-2 col-sm-4 col-md-6  col-lg-7 logo">
+        <div class="col-6 logo">
           <img src="{{asset('front/imagenes/logo.png')}}" class="img-fluid">
         </div>
-        <div class="col-xs-9 col-sm-8 col-md-6 col-lg-5 d-none d-sm-none d-md-block d-lg-block">
+        <div class="col-6">
           <ul class="nav justify-content-end menu">
             <li class="nav-item">
               <a class="nav-link" href="#">VISITAR WEB ANTERIOR</a>
