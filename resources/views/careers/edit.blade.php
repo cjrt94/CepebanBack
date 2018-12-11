@@ -74,8 +74,12 @@
 
                                          <div class="form-group">
                                             <div class="fg-line">
-                                                <textarea required class="form-control" rows="10"
-                                                          placeholder="Details of recipe" name="description" >{{$career->description}}</textarea>
+                                                <textarea required class="html-editor form-control" rows="10"
+                                                          placeholder="Details of recipe" name="description" >
+                                                          {!! $career->description !!}
+                                                </textarea>
+
+
                                             </div>
                                         </div>
 

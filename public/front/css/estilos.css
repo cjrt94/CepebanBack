@@ -185,6 +185,9 @@ h1, h2, h3, h4, h5, h6, a, p {
 	margin-bottom: 70px;
 }
 
+.bloq {
+	color: white !important;
+}
 .carreras .bloq h2{
 	font-family: Comfortaa;
 	font-size: 18px;

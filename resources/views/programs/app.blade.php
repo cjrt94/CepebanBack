@@ -15,18 +15,18 @@
                         <h2>Opciones</h2>
 
                         <ul class="actions">
-                            
+
                             <li class="dropdown">
                                 <a href="" data-toggle="dropdown">
                                     <i class="zmdi zmdi-more-vert"></i>
                                 </a>
 
                                 <ul class="dropdown-menu dropdown-menu-right">
-                                    
+
                                     <li>
                                         <a href="">Refrescar</a>
                                     </li>
-                                     
+
                                 </ul>
                             </li>
                         </ul>
@@ -49,21 +49,21 @@
 								      <th  data-column-id="name" scope="col">Nombre</th>
 								      <th  data-column-id="portion" scope="col">Descripción</th>
                                       <th  data-column-id="id" scope="col"> Editar </th>
-								       
+
 
                                 </tr>
                                 </thead>
                                 <tbody>
-                                                                 
+
                                 @foreach($programs as $program)
 								    <tr>
 								      <td scope="row">{{$program->id}}</td>
 								      <td >{{$program->name}}</td>
-								      <td>{{$program->description}}</td>
-                                      <td><button class="btn btn-icon command-edit waves-effect waves-circle" 
+								      <td>{!!$program->description!!}</td>
+                                      <td><button class="btn btn-icon command-edit waves-effect waves-circle"
                                         onclick="window.location.href='{{route('editProgram', $program->id)}}'" > <span class="zmdi zmdi-edit"></span></button></td>
-								       
- 
+
+
 								    </tr>
 								@endforeach
 

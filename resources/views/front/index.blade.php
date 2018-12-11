@@ -184,7 +184,7 @@
               <div class="container">
                 <div class="row">
                   <h2>{{$career->name}}</h2>
-                  <p>{{$career->description}}</p>
+                   {!! $career->description !!}
                 </div>
               </div>
             </div>
@@ -212,7 +212,7 @@
                   <div class="container">
                     <div class="row">
                       <h2>{{$program->name}}</h2>
-                      <p>{{$program->description}}</p>
+                       {!! $program->description !!}
                     </div>
                   </div>
                 </div>

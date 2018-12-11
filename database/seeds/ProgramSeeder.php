@@ -15,9 +15,9 @@ class ProgramSeeder extends Seeder
 
          $program= new  App\Program();
          $program->name="Cajero Comercial";
-         $program->description="Conviértete en cajero de los principales centros comerciales del país.
+         $program->description="<p>Conviértete en cajero de los principales centros comerciales del país.
          Duración: 3 meses.
-         <strong>Solo en sedes Lima, Huancayo, Huánuco, Iquitos, Pucallpa y Tarapoto.</strong>";
+         <strong>Solo en sedes Lima, Huancayo, Huánuco, Iquitos, Pucallpa y Tarapoto.</strong></p><br/>";
 
          $program->icon="ico-cajero-promotor.png";
          $program->save();
@@ -25,42 +25,42 @@ class ProgramSeeder extends Seeder
          $program= new  App\Program();
          $program->name="Cajero Promotor de Servicios Financieros y Comerciales";
 
-         $program->description="Podrás desempeñarte como cajero en negocios, comercios, empresas, entidades bancarias y más.
+         $program->description="<p>Podrás desempeñarte como cajero en negocios, comercios, empresas, entidades bancarias y más.
          Duración: 6 meses.
-         <strong>Solo en sedes Lima, Huancayo, Huánuco, Iquitos, Pucallpa y Tarapoto.</strong>";
+         <strong>Solo en sedes Lima, Huancayo, Huánuco, Iquitos, Pucallpa y Tarapoto.</strong></p><br/>";
          $program->icon="ico-asistente-contable.png";
          $program->save();
 
          $program= new  App\Program();
          $program->name="Asistente Contable";
-         $program->description="Realiza todo tipo de análisis financieros y contables de manera eficiente.
+         $program->description="<p>Realiza todo tipo de análisis financieros y contables de manera eficiente.
          Duración: 6 meses.
-         <strong>Solo en sedes Lima, Huánuco, Iquitos, Pucallpa y Tarapoto.</strong>";
+         <strong>Solo en sedes Lima, Huánuco, Iquitos, Pucallpa y Tarapoto.</strong></p><br/>";
          $program->icon="ico-cajero-comercial.png";
          $program->save();
 
          $program= new  App\Program();
          $program->name="Gestor de créditos y cobranzas";
-         $program->description="Gestiona de manera efectiva créditos y cobranzas para todo tipo de negocios.
+         $program->description="<p>Gestiona de manera efectiva créditos y cobranzas para todo tipo de negocios.
          Duración: 6 meses.
-         <strong>Solo en sedes Lima, Huancayo, Huánuco, Iquitos, Pucallpa y Tarapoto.</strong>";
+         <strong>Solo en sedes Lima, Huancayo, Huánuco, Iquitos, Pucallpa y Tarapoto.</strong></p><br/>";
          $program->icon="ico-gestor-ventas.png";
          $program->save();
 
          $program= new  App\Program();
          $program->name="Asistente de Gerencia";
 
-         $program->description="Adquiere todas las herramientas para apoyar a la alta gerencia de manera eficiente.
+         $program->description="<p>Adquiere todas las herramientas para apoyar a la alta gerencia de manera eficiente.
          Duración: 6 meses.
-         <strong>Solo en Lima<strong>";
+         <strong>Solo en Lima<strong> </p><br/>";
          $program->icon="ico-asistente-gerencia.png";
          $program->save();
 
          $program= new  App\Program();
          $program->name="Gestor de Ventas";
-         $program->description="Domina procedimientos y técnicas de venta efectivas
+         $program->description="<p>Domina procedimientos y técnicas de venta efectivas
          Duración: 6 meses
-         <strong>Solo en Lima y Pucallpa.</strong>";
+         <strong>Solo en Lima y Pucallpa.</strong></p><br/>";
          $program->icon="ico-gestor-credito.png";
          $program->save();
 
