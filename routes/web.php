@@ -11,18 +11,17 @@
 |
 */
 
-Auth::routes();
+
 
 Route::group(['middleware' => 'guest'], function () {
 
-   Route::get('/', 'HomeController@index');
+   Route::get('/', 'HomeController@index')->name('homeIndex');
 
    Route::get('/venue/{venue}', 'VenueController@getCp' );
 
    Route::post('/leads/create/', 'LeadController@create')->name('createLead');
 
 });
-
 
 
  Route::group(['middleware' => 'auth', 'prefix' => 'admin'  ], function () {
@@ -58,3 +57,5 @@ Route::group(['middleware' => 'guest'], function () {
 
 
 });
+
+Auth::routes();

@@ -14,6 +14,7 @@ use App\Venue;
 class HomeController extends Controller{
 
   public function index(){
+     
 
         $programs=  Program::all();
         $careers= Career::all();

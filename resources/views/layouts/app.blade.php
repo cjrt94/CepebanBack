@@ -124,7 +124,7 @@
                 <ul class="main-menu">
 
                     <li >
-                        <a href="/"><i class="zmdi zmdi-home"></i> Home</a>
+                        <a href="/admin"><i class="zmdi zmdi-home"></i> Home</a>
                     </li>
 
                      <li >
