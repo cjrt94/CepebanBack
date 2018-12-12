@@ -26,3 +26,5 @@ class BackController extends Controller
      return view('home');
    }
 }
+
+ 

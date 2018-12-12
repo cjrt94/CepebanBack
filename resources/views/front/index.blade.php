@@ -311,7 +311,7 @@
 
       $.ajax({
       // la URL para la petición
-      url : 'https://cepeban.herokuapp.com/venue/'+type,
+      url : 'localhost:8000/venue/'+type,
 
       // la información a enviar
       // (también es posible utilizar una cadena de datos)

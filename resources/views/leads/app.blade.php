@@ -23,6 +23,10 @@
                                         <a href="">Refrescar</a>
                                     </li>
 
+                                    <li>
+                                        <a href="" onclick="exportTableToExcel(); return false">Descargar</a>
+                                    </li>
+
                                 </ul>
                             </li>
                         </ul>
@@ -45,6 +49,7 @@
 								      <th  data-column-id="name" scope="col">Nombre</th>
 								      <th  data-column-id="portion" scope="col">Email</th>
                       <th  data-column-id="type" scope="col">Sede</th>
+                      <th  data-column-id="date" scope="col">Fecha</th>
 								      <th  data-column-id="calories" scope="col">Carrera/Programa</th>
 
 
@@ -58,6 +63,7 @@
 								      <td >{{$lead->name}}</td>
 								      <td>{{$lead->email}}</td>
 								      <td>{{App\Venue::find($lead->venue)->name}}</td>
+                      <td>{{$lead->created_at}}</td>
                       <td>{{$lead->type}}</td>
 
 
