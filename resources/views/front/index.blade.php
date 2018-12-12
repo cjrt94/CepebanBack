@@ -40,7 +40,7 @@
         <div class="col-6">
           <ul class="nav justify-content-end menu">
             <li class="nav-item">
-              <a class="nav-link" href="#">VISITAR WEB ANTERIOR</a>
+              <a class="nav-link" href="http://cepeban.edu.pe/instituto/">VISITAR WEB ANTERIOR</a>
             </li>
 
           </ul>
@@ -67,7 +67,7 @@
         </div>
         <div class="col-md-12 col-lg-5 h-100 bloq-der">
           <div class="row h-100 align-items-center">
-            <div class="container">
+            <div class="container" style="transform:scale(0.9)">
                     <h2>REGÍSTRATE</h2>
                     <p>Elige el curso, programa o carrera por el que quieras preguntar y separa tu vacante.</p>
                     <br>
@@ -85,6 +85,12 @@
                       <label for="correo">Correo *</label>
                       <input type="email" class="form-control" id="correo" required aria-describedby="Correo" name="email">
                     </div>
+
+                    <div class="form-group">
+                      <label for="telefono">Teléfono *</label>
+                      <input type="text" class="form-control" id="telefono" aria-describedby="Teléfono" name="phone">
+                    </div>
+
 
                     <div class="form-group">
                       <label for="carrera">Sedes *</label>
@@ -311,7 +317,7 @@
 
       $.ajax({
       // la URL para la petición
-      url : 'localhost:8000/venue/'+type,
+      url : 'http://www.octopus.edu.pe/venue/'+type,
 
       // la información a enviar
       // (también es posible utilizar una cadena de datos)
