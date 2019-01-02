@@ -40,7 +40,10 @@
         <div class="col-6">
           <ul class="nav justify-content-end menu">
             <li class="nav-item">
-              <a class="nav-link" href="http://cepeban.edu.pe/instituto/">VISITAR WEB ANTERIOR</a>
+              <a class="nav-link" href="http://cepeban.edu.pe/cepeban/">VISITAR WEB ANTERIOR</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://cepeban.edu.pe/beca18/">BECA 18</a>
             </li>
 
           </ul>

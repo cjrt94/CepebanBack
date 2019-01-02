@@ -27,8 +27,6 @@ class ProgramController extends Controller
 
     public function update(Program $program,Request $request) {
 
-
-
       $program->name = $request->input('name');
       $program->description = $request->input('description');
       $program->venues()->detach();
@@ -37,7 +35,7 @@ class ProgramController extends Controller
       $program->save();
 
 
-      return redirect('admin/programas');
+      return  Program::all();
 
    }
 
