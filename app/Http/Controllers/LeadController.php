@@ -9,7 +9,7 @@ use App\Lead;
 class LeadController extends Controller
 {
     public function index() {
-    	$leads= Lead::orderBy('created_at','desc')->paginate(10);
+    	$leads= Lead::orderBy('created_at','desc')->get();
     	return view('leads.app', ['leads' => $leads]);
     }
 
@@ -17,8 +17,12 @@ class LeadController extends Controller
 
       Lead::create($request->all());
 
-      return view('front.thanks');
+      return redirect('/gracias');
 
+    }
+
+    public function thanks(){
+        return view('front.thanks');
     }
 }
 

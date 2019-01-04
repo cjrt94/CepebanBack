@@ -21,6 +21,8 @@ Route::group(['middleware' => 'guest'], function () {
 
    Route::post('/leads/create/', 'LeadController@create')->name('createLead');
 
+    Route::get('/gracias', 'LeadController@thanks')->name('thanks');
+
 });
 
 
@@ -41,6 +43,7 @@ Route::group(['middleware' => 'guest'], function () {
 
 		//Leads
 		Route::get('/leads', 'LeadController@index')->name('indexLead');
+
 
 
 		//Content

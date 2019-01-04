@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>@yield('title','Inicio')</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <!--This is what you should include-->
+    <meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8">
+
+
+
+
+    <title>@yield('title','Inicio')</title>
 
     <link rel="stylesheet" href="">
       <!-- CSRF Token -->
@@ -169,78 +176,71 @@
             </div>
         </div>
 
-	   <script src="{{ asset('vendors/bower_components/jquery/dist/jquery.min.js') }}"></script>
-	  <script src="{{ asset('vendors/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 
-        <script src="{{ asset('vendors/bower_components/flot/jquery.flot.js') }}"></script>
-        <script src="{{ asset('vendors/bower_components/flot/jquery.flot.resize.js') }}"></script>
-        <script src="{{ asset('vendors/bower_components/flot.curvedlines/curvedLines.js') }}"></script>
-        <script src="{{ asset('vendors/sparklines/jquery.sparkline.min.js') }}"></script>
+    <script src="{{ asset('vendors/bower_components/jquery/dist/jquery.min.js') }}"></script>
 
+    <script src="{{ asset('vendors/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 
+    <script src="{{ asset('vendors/bower_components/flot/jquery.flot.js') }}"></script>
+    <script src="{{ asset('vendors/bower_components/flot/jquery.flot.resize.js') }}"></script>
+    <script src="{{ asset('vendors/bower_components/flot.curvedlines/curvedLines.js') }}"></script>
+    <script src="{{ asset('vendors/sparklines/jquery.sparkline.min.js') }}"></script>
 
+    <script src="{{ asset('vendors/bower_components/Waves/dist/waves.min.js') }}"></script>
+    <script src="{{ asset('vendors/bootstrap-growl/bootstrap-growl.min.js') }}"></script>
+    <script src="{{ asset('vendors/bower_components/sweetalert/dist/sweetalert.min.js')}}"></script>
+    <script src="{{ asset('vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+    <script src="{{ asset('vendors/summernote/dist/summernote-updated.min.js')}}"></script>
 
-        <script src="{{ asset('vendors/bower_components/Waves/dist/waves.min.js') }}"></script>
-        <script src="{{ asset('vendors/bootstrap-growl/bootstrap-growl.min.js') }}"></script>
-        <script src="{{ asset('vendors/bower_components/sweetalert/dist/sweetalert.min.js')}}"></script>
-        <script src="{{ asset('vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
-        <script src="{{ asset('vendors/summernote/dist/summernote-updated.min.js')}}"></script>
+    <script src="{{ asset('vendors/bower_components/moment/min/moment.min.js')}}"></script>
 
-
-
-        <script src="{{ asset('vendors/bower_components/moment/min/moment.min.js')}}"></script>
-
-         <script src="{{ asset('vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js')}}"></script>
+    <script src="{{ asset('vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js')}}"></script>
 
 
+    <script src="{{ asset('vendors/bower_components/chosen/chosen.jquery.js')}}"></script>
+    <script src="{{ asset('vendors/fileinput/fileinput.min.js')}}"></script>
+    <script src="{{ asset('vendors/input-mask/input-mask.min.js')}}"></script>
+    <script src="{{ asset('vendors/farbtastic/farbtastic.min.js')}}"></script>
+    <script src="{{asset('vendors/bootgrid/jquery.bootgrid.updated.min.js')}}"></script>
+
+    <script src="{{asset('js/FileSaver.min.js')}}"></script>
+    <script src="{{asset('js/Blob.min.js')}}"></script>
+    <script src="{{asset('js/xls.core.min.js')}}"></script>
+    <script src="{{asset('js/tableexport.js')}}"></script>
 
 
-        <script src="{{ asset('vendors/bower_components/chosen/chosen.jquery.js')}}"></script>
-        <script src="{{ asset('vendors/fileinput/fileinput.min.js')}}"></script>
-        <script src="{{ asset('vendors/input-mask/input-mask.min.js')}}"></script>
-        <script src="{{ asset('vendors/farbtastic/farbtastic.min.js')}}"></script>
 
-	    	<script src="{{ asset('js/app.min.js') }}"></script>
+    <script src="{{ asset('js/app.min.js') }}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //Basic Example
+            $("#data-table-basic").bootgrid({
+                css: {
+                    icon: 'zmdi icon',
+                    iconColumns: 'zmdi-view-module',
+                    iconDown: 'zmdi-sort-amount-desc',
+                    iconRefresh: 'zmdi-refresh',
+                    iconUp: 'zmdi-sort-amount-asc'
+                },
+            });
+
+            });
+
+    </script>
 
 
-				<script>
+	<script>
+        $("#data-table-basic").tableExport({
+            formats: ["xlsx","txt", "csv"], //Tipo de archivos a exportar ("xlsx","txt", "csv", "xls")
+            position: 'button',  // Posicion que se muestran los botones puedes ser: (top, bottom)
+            bootstrap: false,//Usar lo estilos de css de bootstrap para los botones (true, false)
+            fileName: "ListadoLeads",    //Nombre del archivo
+        });
 
-							function exportTableToExcel(){
+	</script>
 
-										var tableID ="data-table-basic"
-										var filename = "leads"
 
-								    var downloadLink;
-								    var dataType = 'application/vnd.ms-excel';
-								    var tableSelect = document.getElementById(tableID);
-								    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
-
-								    // Specify file name
-								    filename = filename?filename+'.xls':'excel_data.xls';
-
-								    // Create download link element
-								    downloadLink = document.createElement("a");
-
-								    document.body.appendChild(downloadLink);
-
-								    if(navigator.msSaveOrOpenBlob){
-								        var blob = new Blob(['ufeff', tableHTML], {
-								            type: dataType
-								        });
-								        navigator.msSaveOrOpenBlob( blob, filename);
-								    }else{
-								        // Create a link to the file
-								        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
-
-								        // Setting the file name
-								        downloadLink.download = filename;
-
-								        //triggering the function
-								        downloadLink.click();
-								    }
-								}
-
-				</script>
 
 
 </body>

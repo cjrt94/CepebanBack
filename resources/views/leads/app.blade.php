@@ -23,9 +23,6 @@
                                         <a href="">Refrescar</a>
                                     </li>
 
-                                    <li>
-                                        <a href="" onclick="exportTableToExcel(); return false">Descargar</a>
-                                    </li>
 
                                 </ul>
                             </li>
@@ -43,57 +40,42 @@
                         <div class="table-responsive">
                             <table id="data-table-basic" class="table table-striped">
                                 <thead>
-                                <tr>
+                                    <tr>
 
-                                	  <th  data-column-id="id" scope="col">#</th>
-								      <th  data-column-id="name" scope="col">Nombre</th>
-								      <th  data-column-id="portion" scope="col">Email</th>
-                      <th  data-column-id="type" scope="col">Sede</th>
-                      <th  data-column-id="date" scope="col">Telefono</th>
-                      <th  data-column-id="date" scope="col">Fecha</th>
-								      <th  data-column-id="calories" scope="col">Carrera/Programa</th>
+                                          <th  data-column-id="id" scope="col">#</th>
+                                          <th  data-column-id="name" scope="col">Nombre</th>
+                                          <th  data-column-id="email" scope="col">Email</th>
+                                          <th  data-column-id="venue" scope="col">Sede</th>
+                                          <th  data-column-id="phone" scope="col">Telefono</th>
+                                          <th  data-column-id="date" scope="col">Fecha</th>
+                                          <th  data-column-id="type" scope="col">Carrera/Programa</th>
 
 
-                                </tr>
+                                    </tr>
                                 </thead>
                                 <tbody>
 
                                 @foreach($leads as $lead)
-								    <tr>
+
+                                    <tr>
+
 								      <td scope="row">{{$lead->id}}</td>
 								      <td >{{$lead->name}}</td>
 								      <td>{{$lead->email}}</td>
 								      <td>{{App\Venue::find($lead->venue)->name}}</td>
-                      <td>{{$lead->phone}}</td>
-                      <td>{{$lead->created_at}}</td>
-                      <td>{{$lead->type}}</td>
+                                      <td>{{$lead->phone}}</td>
+                                      <td>{{$lead->created_at}}</td>
+                                      <td>{{$lead->type}}</td>
 
 
 								    </tr>
-								@endforeach
+
+                                @endforeach
 
 
                                 </tbody>
                             </table>
 
-							<div id="data-table-command-footer" class="bootgrid-footer container-fluid">
-								<div class="row">
-									<div class="col-sm-6">
-
-
-			                             @if(count($leads))
-
-									         {{$leads->links()}}
-
-										@endif
-
-									</div>
-
-									<div class="col-sm-6 infoBar">
-										<div class="infos">Showing 1 to 10 of 20 entries</div>
-									</div>
-								</div>
-							</div>
 
 
                         </div>
