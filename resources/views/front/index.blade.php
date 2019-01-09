@@ -124,8 +124,8 @@
 
                     <div class="form-group">
                       <label for="carrera">Sedes *</label>
-                      <select class="form-control"  name="venue" onchange="javascript:filter(this.value);">
-                        <option selected="checked">SELECCIONAR...</option>
+                      <select class="form-control"  name="venue" onchange="javascript:filter(this.value);" id="sede">
+                        <option value='Seleccionar' selected="checked">SELECCIONAR...</option>
                         @foreach($venues as $venue)
                           <option value="{{$venue->id}}" >{{$venue->name}}</option>
                         @endforeach
@@ -134,8 +134,8 @@
 
                     <div class="form-group">
                       <label for="carrera">Carreras / Cursos o Programas*</label>
-                      <select class="form-control" id="pandc" name="type">
-                        <option selected="checked">SELECCIONAR...</option>
+                      <select class="form-control" id="pandc" name="type" onchange="validar()">
+                        <option   value='Seleccionar' selected="checked">SELECCIONAR...</option>
 
                         <optgroup label="Carreras  - Duración 3 años">
                           @foreach($careers as $career)
@@ -162,7 +162,7 @@
                       <div class="container">
                         <div class="row">
                           <div class="col-xs-12 col-sm-12 col-md-12">
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <button id='boton' type="submit" class="btn btn-primary" disabled="true">Enviar</button>
                           </div>
 
                         </div>
@@ -397,6 +397,9 @@
            })
           $('#pandc').append("</optgroup>");
 
+
+
+
       },
 
       // código a ejecutar si la petición falla;
@@ -411,12 +414,38 @@
       // código a ejecutar sin importar si la petición falló o no
       complete : function(xhr, status) {
 
+
+        var indice = document.getElementById("sede").selectedIndex;
+        var indice2 = document.getElementById("pandc").selectedIndex;
+        if( indice === 'Seleccionar' ||  indice2 === 'Seleccionar') {
+          document.getElementById("boton").disabled=false;
+        }else{
+          document.getElementById("boton").disabled=true;
+        }
+
       }
       });
 
     }
 
   </script>
+
+  <script>
+
+    function validar(){
+      var indice = document.getElementById("sede").selectedIndex;
+      var indice2 = document.getElementById("pandc").selectedIndex;
+      if( indice === 'Seleccionar' ||  indice2 === 'Seleccionar') {
+        document.getElementById("boton").disabled=true;
+      }else{
+        document.getElementById("boton").disabled=false;
+      }
+    }
+
+  </script>
+
+
+
 
   <script type="text/javascript">
 
