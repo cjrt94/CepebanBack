@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
-@section('content')
-
 @section('title','Listado de Leads')
 
+@section('content')
 
 <section id="content">
                 <div class="container">
@@ -83,4 +82,38 @@
                 </div>
 </section>
 
+
+
+
+
+@endsection
+
+
+@section('table')
+    <script>
+        $("#data-table-basic").tableExport({
+            formats: ["xlsx","txt", "csv"], //Tipo de archivos a exportar ("xlsx","txt", "csv", "xls")
+            position: 'button',  // Posicion que se muestran los botones puedes ser: (top, bottom)
+            bootstrap: false,//Usar lo estilos de css de bootstrap para los botones (true, false)
+            fileName: "ListadoLeads",    //Nombre del archivo
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //Basic Example
+            $("#data-table-basic").bootgrid({
+                css: {
+                    icon: 'zmdi icon',
+                    iconColumns: 'zmdi-view-module',
+                    iconDown: 'zmdi-sort-amount-desc',
+                    iconRefresh: 'zmdi-refresh',
+                    iconUp: 'zmdi-sort-amount-asc'
+                },
+            });
+
+        });
+
+    </script>
 @endsection
