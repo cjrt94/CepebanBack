@@ -61,7 +61,7 @@
 								      <td scope="row">{{$lead->id}}</td>
 								      <td >{{$lead->name}}</td>
 								      <td>{{$lead->email}}</td>
-								      <td>{{App\Venue::find($lead->venue)->name}}</td>
+								      <td>{{App\Venue::withTrashed()->find($lead->venue)->name}}</td>
                                       <td>{{$lead->phone}}</td>
                                       <td>{{$lead->created_at}}</td>
                                       <td>{{$lead->type}}</td>

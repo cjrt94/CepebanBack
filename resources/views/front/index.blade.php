@@ -108,7 +108,7 @@
 
                     <div class="form-group">
                       <label for="nombres">Nombres *</label>
-                      <input type="text" class="form-control" id="nombres" required aria-describedby="Nombres" name="name">
+                      <input type="text" class="form-control" id="nombres" required aria-describedby="Nombres" name="name" autocomplete="of">
                     </div>
 
                     <div class="form-group">
